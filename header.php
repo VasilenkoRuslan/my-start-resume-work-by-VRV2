@@ -24,7 +24,7 @@
                     <ul class="menu d-flex justify-content-end">
                         <li class="menu__item"><a href="/"><i class="fas fa-home"></i></a></li>
                         <?php for($task_number=1;$task_number<6;$task_number++) {
-                            echo '<li class="menu__item"><a href="task'.$task_number.'/task'.$task_number.'.php">Task №'.$task_number.'</a></li>';
+                            echo '<li class="menu__item"><a href="task'.$task_number.'.php">Task №'.$task_number.'</a></li>';
                         }?>
                         <li class="menu__item"><i class="fas fa-search"></i></li>
                     </ul>
