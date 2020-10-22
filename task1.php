@@ -1,4 +1,4 @@
-<?php require "../header.php";?>
+<?php require "header.php";?>
 <section class="tasks">
     <div class="container">
         <div class="row justify-content-center">
@@ -6,4 +6,4 @@
         </div>
     </div>
 </section>
-<?php require "../footer.php";?>
+<?php require "footer.php";?>
