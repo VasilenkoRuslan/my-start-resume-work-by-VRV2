@@ -1,10 +1,14 @@
 <?php require "header.php";?>
-<section class="tasks">
-    <div class="container">
+<section class="tasks bg-info">
+    <div class="container bg-light borderForm">
         <div class="row justify-content-center">
-            <h2>Задание №3</h2>
-            <h3>Выучить базовые команды Linux(терминала)</h3>
-            <h3>___________________________________________</h3>
+            <div class="col-sm-12 jumbotron text-left bg-light">
+                <h3>Задание №3. Выучить базовые команды Linux(терминала)</h3>
+                <h5>Выучить и научится пользоватся основными командами Linux из сайта faq.testsite.<br> Сдать экзамен Тим Лиду</h5>
+            </div>
+            <div class="col-sm-12 jumbotron text-left">
+                <h3>_______________________________________________</h3>
+            </div>
         </div>
     </div>
 </section>
