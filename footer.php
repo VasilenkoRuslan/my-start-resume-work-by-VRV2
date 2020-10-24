@@ -27,3 +27,4 @@
 </footer>
 <footer class="rules">All rights Reserved C 2020
 </footer>
+
