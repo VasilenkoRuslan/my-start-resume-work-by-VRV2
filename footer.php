@@ -27,7 +27,4 @@
 </footer>
 <footer class="rules">All rights Reserved C 2020
 </footer>
-<script src="js/popper.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-</body>
-</html>
+
