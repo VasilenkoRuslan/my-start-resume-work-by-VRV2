@@ -1,13 +1,36 @@
 <?php
 if (isset($_GET)) {
-    function sendCommand($string) {
-        $stringEkran=addslashes($string);
-        echo "вы хотите отправить команду ".$string."<br>";
-        if ($stringEkran!=$string) {
-            echo "Ваша команда экранирована";
-        }
-        echo "<h5>Команда ".$string." отправлена.</h5>";
+    function get_numeric_bool($val)
+    {
+        if (is_numeric($val)) {
+            return $val + 0;
+        } else if ($val === "true" or $val === "false") {
+            return (bool)$val;
+        } else
+            return $val;
     }
+
+    function result($value1, $value2, $value3, $value4)
+    {
+        if ($value1 === "" or $value2 === "" or $value3 === "" or $value4 === ""){
+            echo "<p style='color:red'>Вы не заполнили все ячейки!</p>";
+    } else {
+        $value1 = get_numeric_bool($value1);
+        $value2 = get_numeric_bool($value2);
+        $value3 = get_numeric_bool($value3);
+        $value4 = get_numeric_bool($value4);
+        $type1 = gettype($value1);
+        $type2 = gettype($value2);
+        $type3 = gettype($value3);
+        $type4 = gettype($value4);
+//        echo $type1 ."<br>". $type2."<br>" . $type3 ."<br>". $type4."<br>";
+        if ($type1 == $type2 and $type2 == $type3 and $type3 == $type4) {
+            echo '<p>Запрос отправки данных выполнится. Актер№1: ' . $value1 . ', Актер№2: ' . $value2 . ', Актер№3: ' . $value3 . ', Актер№4: ' . $value4 . ' </p>';
+        } else {
+            echo "<p>Запрос отправки данных не выполнится, так как вы задали разные типы данных</p>";
+        }
+    }
+}
 }
 ?>
 <?php require "header.php";?>
@@ -21,10 +44,13 @@ if (isset($_GET)) {
                 <div class="col-sm-5 justify-content-center">
                     <form action="" method="GET">
                         <fieldset>
-                            <h5>Введите команду(mySQL) для исполнения(для экранирования при необходимости):</h5>
-                            <input type="text" name="string" size="50" maxlength="45" placeholder="Команда MySQL"><br>
+                            <h5>Напишите четыре имени любимых актеров</h5>
+                            <?php for($numberInput=1;$numberInput<5;$numberInput++) {
+                                echo '<input type="text" name="nameActor'.$numberInput.'" size="50" maxlength="45" placeholder="Имя актера №'.$numberInput.'"><br>';
+                            }
+                            ?>
                             <br>
-                            <input type="submit" class="btn btn-success" value="Задать">
+                            <input type="submit" class="btn btn-success" value="Проверить отправку таких данных">
                         </fieldset>
                     </form>
                 </div>
@@ -32,9 +58,12 @@ if (isset($_GET)) {
             <div class="row">
                 <div class="col-sm-12 jumbotron text-left">
                     <?php
-                    if (isset($_GET["string"])) {
-                        $string= $_GET["string"];
-                            sendCommand($string);
+                    if (isset($_GET["nameActor1"]) and isset($_GET["nameActor2"]) and isset($_GET["nameActor3"]) and isset($_GET["nameActor4"])) {
+                        $nameActor1=$_GET["nameActor1"];
+                        $nameActor2=$_GET["nameActor2"];
+                        $nameActor3=$_GET["nameActor3"];
+                        $nameActor4=$_GET["nameActor4"];
+                        result($nameActor1, $nameActor2, $nameActor3, $nameActor4);
                     }
                     ?>
                 </div>
