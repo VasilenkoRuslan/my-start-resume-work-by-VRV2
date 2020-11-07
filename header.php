@@ -27,7 +27,7 @@
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul class="navbar-nav align-self-end">
                             <li class="nav-item menu__item"><a href="/"><i class="nav-link fas fa-home text-body"></i></a></li>
-                            <?php for($task_number=1;$task_number<10;$task_number++) {
+                            <?php for($task_number=1;$task_number<11;$task_number++) {
                                 echo '<li class="nav-item menu__item"><a href="task'.$task_number.'.php" class="nav-link text-body">Task '.$task_number.'</a></li>';
                             }?>
                             <li class="nav-item menu__item"><a href="/" class="nav-link"><i class="fas fa-search text-body"></i></a></li>
