@@ -14,10 +14,9 @@ if (isset($_GET)) {
             } else if ($number1 < $number2) {
                 return getStringComparison($number2, $number1) . getDiffPercent($number2, $number1);
             } else if ($number1 === $number2 || $number1!=="NULL") {
-                echo '<h5 class="text-warning">Ваши числа одинаковы!Введите разные два числа.</h5>';
+                return '<h5 class="text-warning">Ваши числа одинаковы!Введите разные два числа.</h5>';
             } else echo "";
-        } else {
-            echo '<h5 class="text-danger">Вы ввели некорректные данные.<br>Пожалуйста, введите два числа</h5>';
+        } else {return '<h5 class="text-danger">Вы ввели некорректные данные.<br>Пожалуйста, введите два числа</h5>';
         }
     }
 }
@@ -33,10 +32,11 @@ if (isset($_GET)) {
                 <div class="col-sm-5 justify-content-center">
                     <form action="" method="GET">
                         <fieldset>
-                            <h5>Задайте два числа:</h5>
+                            <label for="">Задайте два числа:
                                 <input type="text" name="firstNumber" size="15" maxlength="5" placeholder="Первое число"><br>
                                 <input type="text" name="secondNumber" size="15" maxlength="5" placeholder="Второе число">
                             <br>
+                            </label>
                             <input type="submit" class="btn btn-success" value="Задать">
                         </fieldset>
                     </form>
@@ -49,7 +49,7 @@ if (isset($_GET["firstNumber"]) and isset($_GET["secondNumber"])) {
     $firstNumber= $_GET["firstNumber"];
     $secondNumber= $_GET["secondNumber"];
     if (isset($firstNumber)||isset($secondNumber)) {
-        getTaskResult($firstNumber, $secondNumber);
+        echo getTaskResult($firstNumber, $secondNumber);
     }}
 ?>
                 </div>

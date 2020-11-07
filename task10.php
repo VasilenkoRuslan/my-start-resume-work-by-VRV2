@@ -10,10 +10,10 @@
                 <form action="" method="POST">
                     <fieldset>
                         <h5>Пожалуйста, выберите город для отображения времени: </h5><br>
-                        <label for="select town">Страна, город:</label>
-                        <select class="default-select mb-3 form-control" id="select town" name="town">
+                        <label for="selectTown">Страна, город:</label>
+                        <select class="default-select mb-3 form-control" id="selectTown" name="town">
                             <?php
-                            $arrayTowns=array("--Выберите город--","Ukraine, Zaporozhye","Russia, Moscow","Belarus, Minsk","United Kingdom, London","USA, New York","UAE, Dubai","Australia, Sydney","Argentina, Buenos-Aires","Japan, Tokyo","China, Beijing");
+                            $arrayTowns=array("--Выберите город--","Europe/Kiev","Europe/Moscow","Europe/Minsk","Europe/London","America/New_York","Asia/Dubai","Australia/Sydney","America/Argentina/Buenos_Aires","Asia/Tokyo","Asia/Shanghai");
                             for ($indexTown=0;$indexTown<11;$indexTown++) {
                                 echo '<option> '.$arrayTowns[$indexTown].' </option>';
                             }?>
@@ -29,18 +29,11 @@
                 if (isset($_POST["town"])) {
                     $town = $_POST["town"];
                     $indexTown=array_search($town,$arrayTowns);
-                    $timeNow=time();
-                    $arrayDiffTime=array("0","0","+1","+1","-2","-7","+2","+9","-5","+7","+6");
-                    $timeNowInTown=$timeNow+(($arrayDiffTime["$indexTown"])*60*60);
-                    function writeTownDate($time) {
-                        return date("Y F d l G:i:s",$time);
-                    }
                     if ($indexTown=="0") {
                         echo "<h3 style='color:darkred'>Вы не выбрали город!<br> Пожалуйста, выберите город.</h3>";
                     } else {
-                        echo "<h3 style='color:lightseagreen'>".$town."</h3>";
-                        echo "<h4 style='color:darkblue'>".writeTownDate($timeNowInTown)."</h4>";
-                        echo "<br>Разница во времени: ".$arrayDiffTime["$indexTown"]." час(-a,-ов).";
+                        date_default_timezone_set("$town");
+                        echo "<h3 style='color:lightseagreen'>".$town."</h3><h4 style='color:darkblue'>".date("Y F d l G:i:s")."</h4>";
                     }
                 }
                 ?>
