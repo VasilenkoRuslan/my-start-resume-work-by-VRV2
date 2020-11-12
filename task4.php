@@ -1,4 +1,4 @@
-<?php require "header.php";?>
+<?php require "header.php"; ?>
     <section class="tasks bg-info">
         <div class="container bg-light borderForm">
             <div class="row justify-content-center">
@@ -12,4 +12,4 @@
             </div>
         </div>
     </section>
-<?php require "footer.php";?>
+<?php require "footer.php"; ?>

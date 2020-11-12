@@ -1,15 +1,16 @@
-<?php require "header.php";?>
+<?php require "header.php"; ?>
 <script type="text/javascript">
-    function getResult() {
-                let town=$('#town').val();
-                $.ajax({
-                    type: "POST",
-                    url: 'task10ajax.php',
-                    data: {town:town}
-                }).done(function(result){
-                    $("#result").html(result);
-                });
-        }
+    function getResult()
+    {
+        let town = $('#town').val();
+        $.ajax({
+            type: "POST",
+            url : 'task10ajax.php',
+            data: {town: town}
+        }).done(function (result) {
+            $("#result").html(result);
+        });
+    }
 </script>
 <section class="tasks bg-info">
     <div class="container bg-light borderForm">
@@ -25,15 +26,32 @@
                         <label for="town">Страна, город:</label>
                         <select class="default-select mb-3 form-control" id="town" name="town">
                             <?php
-                            $arrayTowns=array("--Выберите город--","Europe/Kiev","Europe/Moscow","Europe/Minsk","Europe/London","America/New_York","Asia/Dubai","Australia/Sydney","America/Argentina/Buenos_Aires","Asia/Tokyo","Asia/Shanghai");
-                            for ($indexTown=0;$indexTown<11;$indexTown++) {
-                                echo '<option> '.$arrayTowns[$indexTown].' </option>';
-                            }?>
+                            $arrayTowns = [
+                                "--Выберите город--",
+                                "Europe/Kiev",
+                                "Europe/Moscow",
+                                "Europe/Minsk",
+                                "Europe/London",
+                                "America/New_York",
+                                "Asia/Dubai",
+                                "Australia/Sydney",
+                                "America/Argentina/Buenos_Aires",
+                                "Asia/Tokyo",
+                                "Asia/Shanghai",
+                            ];
+
+                            foreach ($arrayTowns as $town){
+                                echo '<option> ' . $town . ' </option>';
+                            }
+
+                             ?>
                         </select>
-                        <input type='hidden' name='indexTown' id="index" value='<?php $town=$_POST['town'];echo $indexTown=array_search($town,$arrayTowns); ?>'><br>
+                        <input type='hidden' name='indexTown' id="index" value='<?php $town = $_POST['town'];
+                        echo $indexTown = array_search($town, $arrayTowns); ?>'><br>
                         <input type="button" class="btn btn-success" name="submit" id="submit" value="Сколько время?" onclick="getResult()">
                     </fieldset>
-                </form><br>
+                </form>
+                <br>
             </div>
         </div>
         <div class="row">
@@ -42,4 +60,4 @@
         </div>
     </div>
 </section>
-<?php require "footer.php";?>
+<?php require "footer.php"; ?>

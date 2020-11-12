@@ -1,10 +1,12 @@
+<?php include('init_db.php'); ?>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/fonts.css" >
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <script src="js/jquery.min.js"></script>
@@ -28,32 +30,32 @@
                         <ul class="navbar-nav align-self-end">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle menu__item" href="#" data-toggle="dropdown">
-                                    Tasks  1-5
+                                    Tasks 1-5
                                 </a>
                                 <div class="dropdown-menu">
-                                    <?php for($task_number=1;$task_number<6;$task_number++) {
-                                    echo '<a href="task'.$task_number.'.php" class="dropdown-item text-body">Task '.$task_number.'</a>';
-                                    }?>
+                                    <?php for ($task_number = 1; $task_number < 6; $task_number++) {
+                                        echo '<a href="task' . $task_number . '.php" class="dropdown-item text-body">Task ' . $task_number . '</a>';
+                                    } ?>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle menu__item" href="#" data-toggle="dropdown">
-                                    Tasks  6-10
+                                    Tasks 6-10
                                 </a>
                                 <div class="dropdown-menu">
-                                    <?php for($task_number=6;$task_number<11;$task_number++) {
-                                        echo '<a href="task'.$task_number.'.php" class="dropdown-item text-body">Task '.$task_number.'</a>';
-                                    }?>
+                                    <?php for ($task_number = 6; $task_number < 11; $task_number++) {
+                                        echo '<a href="task' . $task_number . '.php" class="dropdown-item text-body">Task ' . $task_number . '</a>';
+                                    } ?>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle menu__item" href="#" data-toggle="dropdown">
-                                    Tasks  11-15
+                                    Tasks 11-15
                                 </a>
                                 <div class="dropdown-menu">
-                                <?php for($task_number=11;$task_number<16;$task_number++) {
-                                    echo '<a href="task'.$task_number.'.php" class="dropdown-item text-body">Task '.$task_number.'</a>';
-                                }?>
+                                    <?php for ($task_number = 11; $task_number < 16; $task_number++) {
+                                        echo '<a href="task' . $task_number . '.php" class="dropdown-item text-body">Task ' . $task_number . '</a>';
+                                    } ?>
                                 </div>
                             </li>
                         </ul>

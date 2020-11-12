@@ -1,4 +1,4 @@
-<?php require "header.php";?>
+<?php require "header.php"; ?>
 <section class="tasks bg-info">
     <div class="container bg-light borderForm">
         <div class="row justify-content-center">
@@ -7,9 +7,9 @@
                 <h5>Зайти на ЛК Хостинга и создать поддомен. Уметь пользоватся ЛК.</h5>
             </div>
             <div class="col-sm-12 jumbotron text-left">
-            <h3>Создал поддомен с адресом Хоста <a href="http://vrvtask.testsite.co.ua/">vrvtask.testsite.co.ua</a></h3>
+                <h3>Создал поддомен с адресом Хоста <a href="http://vrvtask.testsite.co.ua/">vrvtask.testsite.co.ua</a></h3>
             </div>
         </div>
     </div>
 </section>
-<?php require "footer.php";?>
+<?php require "footer.php"; ?>
