@@ -194,7 +194,7 @@
                     <br>
                 </div>
                 <?php
-                if ($_GET["add"]) {
+                if ($_GET['add']) {
                     ?>
                     <div class="container borderForm bg-secondary text-warning">
                         <h3 class="text-center">Форма добавления продукта</h3>
