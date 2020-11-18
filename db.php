@@ -1,6 +1,6 @@
 <?php
 
-$host = '91.239.235.118';
-$userName = "vasilenko_ruslan";
-$userPassword = "flexi140";
+$host = 'localhost';
+$userName = "root";
+$userPassword = "1";
 $dbName = "vrvtask";

@@ -1,7 +1,9 @@
 # ignore Editor files
 .idea
+db.php
 #ignore node dependency directories
 node_modules/
+filesForTasks/
 #ignore log files and databases
 *.iml
 *.log
