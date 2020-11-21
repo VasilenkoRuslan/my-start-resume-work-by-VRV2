@@ -1,6 +1,3 @@
-<?php
-
-?>
 <?php require "header.php"; ?>
 <section class="tasks bg-info">
     <div class="container bg-light borderForm">
@@ -58,4 +55,3 @@
     </div>
 </section>
 <?php require "footer.php"; ?>
-
