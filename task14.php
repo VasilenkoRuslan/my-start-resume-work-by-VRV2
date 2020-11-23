@@ -14,10 +14,10 @@ $varAnswer = array(
         </title>
         <style>
             #window {
-                max-width: 45%;
+                max-width: 50em;
                 min-width: 30em;
-                min-height: 40em;
-                margin: 40% auto;
+                /*min-height: 100%;*/
+                margin: 10% auto;
                 z-index: 150;
                 display: none;
                 position: fixed;
