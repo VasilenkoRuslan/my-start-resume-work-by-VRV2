@@ -4,6 +4,7 @@
         let town = $('#town').val();
         $.ajax({
             type: "POST",
+            dataType: 'json',
             url: 'task10ajax.php',
             data: {town: town}
         }).done(function (result) {
@@ -25,19 +26,13 @@
                         <h5>Пожалуйста, выберите город для отображения времени: </h5><br>
                         <label for="town">Страна, город:</label>
                         <select class="default-select mb-3 form-control" id="town" name="town">
-                            <option>--Выберите город--</option>
+                            <option></option>
                             <?php
-                            $arrayNameTowns = timezone_identifiers_list();
-                            foreach ($arrayNameTowns as $key => $town) {
-                                if ($key > 280) {
-                                    ?>
-                                    <option> <?= $town; ?> </option>
-                                    <?php
+                            $arrayTown=timezone_identifiers_list();
+                            foreach ($arrayTown as $key => $town) { ?>
+                                    <option value="<?= $key; ?>"> <?= $town; ?> </option>
+                                    <?php if ($key == 250) break;
                                 }
-                                if ($key > 420) {
-                                    break;
-                                }
-                            }
                             ?>
                         </select>
                         <input type="button" class="btn btn-success" name="submit" id="submit" value="Сколько время?"

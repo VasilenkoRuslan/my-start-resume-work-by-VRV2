@@ -3,6 +3,22 @@ $typeWoman = 'Woman';
 $typeMan = 'Man';
 $startInputYear = 1969;
 $endInputYear = 2009;
+
+function respect($gender)
+{
+    global $typeWoman;
+    global $typeMan;
+
+    switch ($gender) {
+        case $typeWoman:
+            return "Уважаемый";
+        case $typeMan:
+            return "Уважаемая";
+        default :
+            return "Не известрно кто";
+    }
+}
+
 ?>
 <?php require "header.php"; ?>
 <section class="tasks bg-info">
@@ -46,12 +62,24 @@ $endInputYear = 2009;
                             }
                             ?>
                         </select>
-                        <div class="form-group">
-                            <label for="information">Информация про Вас:
-                                <textarea class="form-control" rows="5" cols="50" id="information"
-                                          name="information"></textarea>
+                        <div class="col-sm-8">
+                            <?php for ($i = 1; $i < 6; $i++) { ?>
+                                <label class="form-check-label col-sm-1" for="">
+                                    <input type="checkbox" class="form-check-input" name="option<?= $i; ?>"
+                                           value="something<?= $i; ?>">,
+                                </label>
+                                <?php
+                            }
+                            ?>
+                            <label class="form-check-label col-sm-1" for="">
+                                <input type="checkbox" class="form-check-input" name="option<?= $i; ?>"
+                                       value="something<?= $i; ?>">&nbsp
                             </label>
                         </div>
+                        <label for="information">Информация про Вас:
+                            <textarea class="form-control" rows="5" cols="50" id="information"
+                                      name="information"></textarea>
+                        </label>
                         <input type="submit" class="btn btn-success" value="Отправить">
                     </fieldset>
                 </form>
@@ -60,25 +88,12 @@ $endInputYear = 2009;
         <div class="row">
             <div class="col-sm-12 jumbotron text-left">
                 <?php
-                if (isset($_POST["name"])) {
-
-                    function respect($gender)
-                    {
-                        global $typeWoman;
-                        global $typeMan;
-
-                        switch ($gender) {
-                            case $typeWoman:
-                                return "Уважаемый";
-                            case $typeMan:
-                                return "Уважаемая";
-                            default :
-                                return "Не известрно кто";
-                        }
-                    }
-
-                    $respect = respect($_POST["gender"]);
-                    echo $respect . $_POST["name"] . ' ' . $_POST["surname"] . ' ' . $_POST["yearOfBirth"] . " года рождения!<br>Информация про Вас:<p style='color:green'>" . $_POST["information"] . '</p>добавлена в Вашу карточку.<br>Ваше резюме добавлено в список для рассмотрения.';
+                if (isset($_POST["name"])) { ?>
+                    <p><?= respect($_POST["gender"]) . $_POST["name"] . ' ' . $_POST["surname"] . ' ' . $_POST["yearOfBirth"]; ?>
+                        года рождения!<br>Информация про Вас:<br>
+                        <span class="text-success"><?= $_POST["information"]; ?></span>
+                        добавлена в Вашу карточку.<br>Ваше резюме добавлено в список для рассмотрения.</p>
+                    <?php
                 }
                 ?>
             </div>

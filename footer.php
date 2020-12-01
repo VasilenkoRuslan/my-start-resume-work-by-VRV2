@@ -8,18 +8,24 @@
         </div>
         <div class="row justify-content-around">
             <div class="col-xl-3 col-md-4">
-                <a href="#"><div class="circle">
-                        <i class="fas fa-map-marker-alt"></i></div></a>
+<!--                <a href="#">-->
+                    <div class="circle">
+                        <i class="fas fa-map-marker-alt"></i></div>
+<!--                </a>-->
                 <p>Vasylenko Ruslan,<br>Zaporizhia Ukraine</p>
             </div>
             <div class="col-xl-3 col-md-4">
-                <a href="#"><div class="circle">
-                        <i class="fas fa-phone fa-rotate-90"></i></div></a>
+<!--                <a href="#">-->
+                    <div class="circle">
+                        <i class="fas fa-phone fa-rotate-90"></i></div>
+<!--                </a>-->
                 <p>+380992889268</p>
             </div>
             <div class="col-xl-3 col-md-4">
-                <a href="#"><div class="circle">
-                        <i class="fas fa-envelope"></i></div></a>
+<!--                <a href="#">-->
+                    <div class="circle">
+                        <i class="fas fa-envelope"></i></div>
+<!--                </a>-->
                 <p>vasilenko.ruslan0321@gmail.com</p>
             </div>
         </div>

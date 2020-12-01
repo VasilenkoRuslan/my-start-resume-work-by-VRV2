@@ -1,60 +1,10 @@
-<?php
-if (isset($_POST)) {
-
-    if (isset($_POST["deleteFile"])) {
-        $nameFile = $_POST['nameFile'];
-        unlink($nameFile . ".txt");
-        unlink($nameFile . ".php");
-        echo "Файл $nameFile удален";
-    }
-
-    function createButton($name)
-    {
-        return <<<EOD
-            <form action='$name.php' method='POST'>
-            <input type='hidden' name='nameFile' value='$name'>
-            <a href='$name.php'>
-<input type='submit' class='btn btn-outline-primary' value='Открыть файл $name в новой вкладке'></a>
-EOD;
-    }
-
-    function createAndWrite($name, $textInto)
-    {
-        $fileText = fopen($name . ".txt", "w");
-        $textInto = htmlspecialchars($textInto);
-        if (!(fwrite($fileText, $textInto))) {
-            echo "Запись не прошла, нет прав корневой папки";
-            exit();
-        }
-        fclose($fileText);
-        chmod($name . '.txt', 0777);
-
-        $filePhp = fopen($name . '.php', "w+");
-        $pageContent = <<<'EOD'
-<?php require "header.php"; ?>
-<section class="tasks bg-info">
-    <div class="container bg-light borderForm">
-        <div class="row justify-content-center">
-            <div class="col-sm-9 jumbotron text-center bg-light">
-                <p><?= file_get_contents($_POST['nameFile'].'.txt'); ?></p>
-                <form action="task9.php" method="POST">
-                    <input type='hidden' name='nameFile' value='<?= $_POST["nameFile"]; ?>'><br>
-                    <a href="task9.php"><input type='submit' name='deleteFile' class='btn btn-success' value='Удалить файл <?= $_POST["nameFile"]; ?> и вернутся'></a>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-<?php require "footer.php"; ?>
-EOD;
-        fwrite($filePhp, $pageContent);
-        fclose($filePhp);
-        chmod($name . '.php', 0777);
-        return '<p>Файл создан!</p>' . createButton($name);
-    }
+<?php require "header.php";
+if (isset($_POST["deleteFile"])) {
+    unlink($_POST['nameFile'] . ".txt"); ?>
+    <p class="text-danger text-center">Файл <?= $_POST['nameFile']; ?> удален.</p>
+    <?php
 }
 ?>
-<?php require "header.php"; ?>
 <section class="tasks bg-info">
     <div class="container bg-light borderForm">
         <div class="row">
@@ -85,9 +35,21 @@ EOD;
             <div class="col-sm-12 jumbotron text-left">
                 <?php
                 if (isset($_POST["nameFile"], $_POST["textIntoFile"])) {
-                    echo createAndWrite($_POST["nameFile"], $_POST["textIntoFile"]);
+                $fileText = fopen($_POST["nameFile"] . ".txt", "w+");
+                $textInto = htmlspecialchars($_POST["textIntoFile"]);
+                if (empty(fwrite($fileText, $textInto))) { ?>
+                    <p class="text-danger">Запись не прошла.</p>
+                <?php exit();
                 }
                 ?>
+                <p>Файл создан!</p>
+                <?php fclose($fileText); ?>
+                <form action='task9readFile.php' method='POST'>
+                    <input type='hidden' name='nameFile' value='<?= $_POST["nameFile"]; ?>'>
+                    <input type='submit' class='btn btn-outline-primary' value='Открыть файл <?= $_POST["nameFile"]; ?> в новой вкладке'>
+                    <?php
+                    }
+                    ?>
             </div>
         </div>
     </div>

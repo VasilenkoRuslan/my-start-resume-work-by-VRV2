@@ -26,11 +26,6 @@ ul, li {
     border: #0c5460 5px solid;
 }
 
-.contact_title {
-    font-size: 30px;
-    font-weight: bold;
-}
-
 .icon {
     transition: 0.3s;
     font-size: 60px;
@@ -53,6 +48,11 @@ ul, li {
     color: #fff;
     background: #212121;
     text-align: center;
+}
+
+.footer .contact_title {
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .footer .contact_text {
