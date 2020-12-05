@@ -1,6 +1,7 @@
 <?php require "header.php"; ?>
 <?php
 $pathToDir = "gallery";
+
 function getPictures($pathToDir)
 {
     $pictures = [];
@@ -24,7 +25,6 @@ function showFile($pathToFile)
     </div>
     <?php
 }
-
 ?>
 <section class="tasks bg-info">
     <div class="container bg-light borderForm">
