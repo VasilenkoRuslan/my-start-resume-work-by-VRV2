@@ -36,7 +36,7 @@ ul, li {
 
 .tasks {
     padding: 100px 0 250px;
-    max-height: 2000px;
+    min-height: 500px;
     text-align: left;
     border-bottom: #0f6674 10px solid;
     font-family: 'Roboto Light Italic', serif;
