@@ -10,6 +10,8 @@ if (mysqli_connect_errno()) {
     exit();
 }
 
+mysqli_set_charset($mysqlConnect, "utf8");
+
 function mysqlQuery($query)
 {
     global $mysqlConnect;

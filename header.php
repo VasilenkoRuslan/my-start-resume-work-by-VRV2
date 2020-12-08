@@ -23,7 +23,8 @@
             <div class="col-xl-9 col-md-12">
                 <nav class="navbar navbar-expand-sm bg-white navbar-light d-flex justify-content-between">
                     <img src="img/logo.png" alt="logo" class="logo navbar-brand float-left">
-                    <button class="navbar-toggler btn btn-info bg-info" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <button class="navbar-toggler btn btn-info bg-info" type="button" data-toggle="collapse"
+                            data-target="#collapsibleNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -33,8 +34,10 @@
                                     Tasks 1-5
                                 </a>
                                 <div class="dropdown-menu">
-                                    <?php for ($task_number = 1; $task_number <= 5; $task_number++) {
-                                        echo '<a href="task' . $task_number . '.php" class="dropdown-item text-body">Task ' . $task_number . '</a>';
+                                    <?php for ($task_number = 1; $task_number <= 5; $task_number++) { ?>
+                                        <a href="task<?= $task_number; ?>.php"
+                                           class="dropdown-item text-body">Task <?= $task_number; ?></a>
+                                        <?php
                                     } ?>
                                 </div>
                             </li>
@@ -43,8 +46,10 @@
                                     Tasks 6-10
                                 </a>
                                 <div class="dropdown-menu">
-                                    <?php for ($task_number = 6; $task_number <= 10; $task_number++) {
-                                        echo '<a href="task' . $task_number . '.php" class="dropdown-item text-body">Task ' . $task_number . '</a>';
+                                    <?php for ($task_number = 6; $task_number <= 10; $task_number++) { ?>
+                                        <a href="task<?= $task_number; ?>.php"
+                                           class="dropdown-item text-body">Task <?= $task_number; ?></a>
+                                        <?php
                                     } ?>
                                 </div>
                             </li>
@@ -53,18 +58,24 @@
                                     Tasks 11-15
                                 </a>
                                 <div class="dropdown-menu">
-                                    <?php for ($task_number = 11; $task_number <= 15; $task_number++) {
-                                        echo '<a href="task' . $task_number . '.php" class="dropdown-item text-body">Task ' . $task_number . '</a>';
+                                    <?php for ($task_number = 11; $task_number <= 15; $task_number++) { ?>
+                                        <a href="task<?= $task_number; ?>.php"
+                                           class="dropdown-item text-body">Task <?= $task_number; ?></a>
+                                        <?php
                                     } ?>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle menu__item" href="#" data-toggle="dropdown">
-                                    Tasks 16-17
+                                    Tasks 16-20
                                 </a>
                                 <div class="dropdown-menu">
-                                    <?php for ($task_number = 16; $task_number <= 17; $task_number++) {
-                                        echo '<a href="task' . $task_number . '.php" class="dropdown-item text-body">Task ' . $task_number . '</a>';
+                                    <?php for ($task_number = 16; $task_number <= 20; $task_number++) {
+                                        if ($task_number !== 18) { ?>
+                                            <a href="task<?= $task_number; ?>.php"
+                                               class="dropdown-item text-body">Task <?= $task_number; ?></a>
+                                            <?php
+                                        }
                                     } ?>
                                 </div>
                             </li>
@@ -72,7 +83,8 @@
                     </div>
                     <div>
                         <ul class="navbar-nav align-self-end">
-                            <li class="nav-item menu__item"><a href="/" class="nav-link"><i class="fas fa-search text-body"></i></a></li>
+                            <li class="nav-item menu__item"><a href="/" class="nav-link"><i
+                                            class="fas fa-search text-body"></i></a></li>
                         </ul>
                     </div>
                 </nav>
