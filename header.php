@@ -79,6 +79,18 @@
                                     } ?>
                                 </div>
                             </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle menu__item" href="#" data-toggle="dropdown">
+                                    Tasks 21-25
+                                </a>
+                                <div class="dropdown-menu">
+                                    <?php for ($task_number = 21; $task_number <= 25; $task_number++) { ?>
+                                        <a href="task<?= $task_number; ?>.php"
+                                           class="dropdown-item text-body">Task <?= $task_number; ?></a>
+                                        <?php
+                                    } ?>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                     <div>
