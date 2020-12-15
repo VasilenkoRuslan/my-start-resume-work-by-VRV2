@@ -1,4 +1,8 @@
 <?php include('init_db.php'); ?>
+<?php
+$howMachToOneBtnTasks = 5;
+$howMachBtn = 6;
+?>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -29,68 +33,25 @@
                     </button>
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul class="navbar-nav align-self-end">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle menu__item" href="#" data-toggle="dropdown">
-                                    Tasks 1-5
-                                </a>
-                                <div class="dropdown-menu">
-                                    <?php for ($task_number = 1; $task_number <= 5; $task_number++) { ?>
-                                        <a href="task<?= $task_number; ?>.php"
-                                           class="dropdown-item text-body">Task <?= $task_number; ?></a>
-                                        <?php
-                                    } ?>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle menu__item" href="#" data-toggle="dropdown">
-                                    Tasks 6-10
-                                </a>
-                                <div class="dropdown-menu">
-                                    <?php for ($task_number = 6; $task_number <= 10; $task_number++) { ?>
-                                        <a href="task<?= $task_number; ?>.php"
-                                           class="dropdown-item text-body">Task <?= $task_number; ?></a>
-                                        <?php
-                                    } ?>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle menu__item" href="#" data-toggle="dropdown">
-                                    Tasks 11-15
-                                </a>
-                                <div class="dropdown-menu">
-                                    <?php for ($task_number = 11; $task_number <= 15; $task_number++) { ?>
-                                        <a href="task<?= $task_number; ?>.php"
-                                           class="dropdown-item text-body">Task <?= $task_number; ?></a>
-                                        <?php
-                                    } ?>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle menu__item" href="#" data-toggle="dropdown">
-                                    Tasks 16-20
-                                </a>
-                                <div class="dropdown-menu">
-                                    <?php for ($task_number = 16; $task_number <= 20; $task_number++) {
-                                        if ($task_number !== 18) { ?>
+                            <?php for ($btn_count = 1; $btn_count <= $howMachBtn; $btn_count++) {
+                                $btn_task_number_start = (($btn_count - 1) * $howMachToOneBtnTasks + 1);
+                                $btn_task_number_finish = ($btn_count * $howMachToOneBtnTasks); ?>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle menu__item" href="#" data-toggle="dropdown">
+                                        Tasks <?= $btn_task_number_start; ?>-<?= $btn_task_number_finish; ?>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <?php for ($task_number = $btn_task_number_start; $task_number <= $btn_task_number_finish; $task_number++) { ?>
                                             <a href="task<?= $task_number; ?>.php"
                                                class="dropdown-item text-body">Task <?= $task_number; ?></a>
                                             <?php
                                         }
-                                    } ?>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle menu__item" href="#" data-toggle="dropdown">
-                                    Tasks 21-25
-                                </a>
-                                <div class="dropdown-menu">
-                                    <?php for ($task_number = 21; $task_number <= 25; $task_number++) { ?>
-                                        <a href="task<?= $task_number; ?>.php"
-                                           class="dropdown-item text-body">Task <?= $task_number; ?></a>
-                                        <?php
-                                    } ?>
-                                </div>
-                            </li>
+                                        ?>
+                                    </div>
+                                </li>
+                                <?php
+                            }
+                            ?>
                         </ul>
                     </div>
                     <div>
