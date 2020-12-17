@@ -1,0 +1,25 @@
+.block_content {
+    background: #f6f6f6;
+    margin: 20px auto;
+    font: normal 13px/100% sans-serif;
+    color: #444;
+}
+
+.btnLoadMore {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.content {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.btnLoadMore:checked + .content {
+    -webkit-line-clamp: unset;
+}
+.btnLoadMore:checked ~ label {
+    display: none;
+}
