@@ -2,19 +2,16 @@
 if (isset($_GET)) {
     function getDiffPercent($number1, $number2)
     {
+        if (($number1 < 0 && $number2 > 0) || ($number1 > 0 && $number2 < 0)) {
+            return "Расчет не имеет смысла";
+        }
         if ($number1 == 0 && $number2 == 0) {
-            return "0";
+            return 0;
         }
         if ($number1 == 0 || $number2 == 0) {
             return 100;
         }
-        if ($number1 >= $number2) {
-            return abs($number1 / $number2 - 1) * 100;
-        }
-        if ($number2 > $number1) {
-            return abs($number2 / $number1 - 1) * 100;
-        }
-        return '';
+        return (max(abs($number1),abs($number2)) / min(abs($number1),abs($number2)) - 1) * 100;
     }
 }
 ?>
@@ -48,18 +45,7 @@ if (isset($_GET)) {
                 <div class="col-sm-12 jumbotron">
                     <?php
                     if (isset($_GET['firstNumber'])) {
-                        if (($_GET['firstNumber'] < 0 && $_GET['secondNumber'] > 0) || ($_GET['firstNumber'] > 0 && $_GET['secondNumber'] < 0)) { ?>
-                            <h5 class="text-danger">Расчет не имеет смысла</h5>
-                            <?php
-                        }
-                        if (($_GET['firstNumber'] >= 0 && $_GET['secondNumber'] >= 0) || ($_GET['firstNumber'] <= 0 && $_GET['secondNumber'] <= 0)) {
-                            ?>
-                            <h5>Разница между
-                                числами <?= getDiffPercent($_GET['firstNumber'], $_GET['secondNumber']); ?>
-                                %.
-                            </h5>
-                            <?php
-                        }
+                        echo getDiffPercent($_GET['firstNumber'], $_GET['secondNumber']);
                     }
                     ?>
                 </div>
