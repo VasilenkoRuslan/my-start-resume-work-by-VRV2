@@ -3,16 +3,16 @@ $typeWoman = 'Woman';
 $typeMan = 'Man';
 $startInputYear = 1969;
 $endInputYear = 2009;
-
+$arrayValCheckboxes = ["HTML", "CSS", "JS", "PHP", "MySQl"];
 function respect($gender)
 {
     global $typeWoman;
     global $typeMan;
 
     switch ($gender) {
-        case $typeWoman:
-            return "Уважаемый";
         case $typeMan:
+            return "Уважаемый";
+        case $typeWoman:
             return "Уважаемая";
         default :
             return "Не известрно кто";
@@ -62,24 +62,20 @@ function respect($gender)
                             }
                             ?>
                         </select>
-                        <div class="col-sm-8">
-                            <?php for ($i = 1; $i < 6; $i++) { ?>
+                        <div class="col-sm-12">
+                            <?php for ($i = 0; $i < count($arrayValCheckboxes); $i++) { ?>
                                 <label class="form-check-label col-sm-1" for="">
-                                    <input type="checkbox" class="form-check-input" name="option<?= $i; ?>"
-                                           value="something<?= $i; ?>">,
+                                    <input type="checkbox" class="form-check-input" name="langProg[]"
+                                           value="<?= $arrayValCheckboxes[$i]; ?>"> <?= $arrayValCheckboxes[$i]; ?>
                                 </label>
                                 <?php
                             }
                             ?>
-                            <label class="form-check-label col-sm-1" for="">
-                                <input type="checkbox" class="form-check-input" name="option<?= $i; ?>"
-                                       value="something<?= $i; ?>">&nbsp
-                            </label>
                         </div>
                         <label for="information">Информация про Вас:
                             <textarea class="form-control" rows="5" cols="50" id="information"
                                       name="information"></textarea>
-                        </label>
+                        </label><br>
                         <input type="submit" class="btn btn-success" value="Отправить">
                     </fieldset>
                 </form>
@@ -91,7 +87,8 @@ function respect($gender)
                 if (isset($_POST["name"])) { ?>
                     <p><?= respect($_POST["gender"]) . $_POST["name"] . ' ' . $_POST["surname"] . ' ' . $_POST["yearOfBirth"]; ?>
                         года рождения!<br>Информация про Вас:<br>
-                        <span class="text-success"><?= $_POST["information"]; ?></span>
+                        Владение языков: <?= implode(", ", $_POST["langProg"]); ?><br>
+                        <span class="text-success"><?= $_POST["information"]; ?></span><br>
                         добавлена в Вашу карточку.<br>Ваше резюме добавлено в список для рассмотрения.</p>
                     <?php
                 }
