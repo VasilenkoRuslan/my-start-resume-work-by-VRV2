@@ -1,14 +1,18 @@
 <?php require "header.php"; ?>
 <script type="text/javascript">
     function getResult() {
-        let town = $('#town').val();
         $.ajax({
             type: "POST",
             dataType: 'json',
             url: 'task10ajax.php',
-            data: {town: town}
-        }).done(function (result) {
-            $("#result").html(result);
+            data: {town: $('#town').val()}
+        }).done(function (data) {
+            if (data.error) {
+                $("#result").html("<h3 style='color:darkred'>Вы не выбрали город!<br> Пожалуйста, выберите город.</h3>");
+            }
+            if (data.result) {
+                $("#result").html("<h3 style='color:lightseagreen'>"+data.nameTown+"</h3><h4 style='color:darkblue'>"+data.timeInTown+"</h4>");
+            }
         });
     }
 </script>
@@ -28,11 +32,11 @@
                         <select class="default-select mb-3 form-control" id="town" name="town">
                             <option></option>
                             <?php
-                            $arrayTown=timezone_identifiers_list();
+                            $arrayTown = timezone_identifiers_list();
                             foreach ($arrayTown as $key => $town) { ?>
-                                    <option value="<?= $key; ?>"> <?= $town; ?> </option>
-                                    <?php if ($key == 250) break;
-                                }
+                                <option value="<?= $key; ?>"> <?= $town; ?> </option>
+                                <?php if ($key == 250) break;
+                            }
                             ?>
                         </select>
                         <input type="button" class="btn btn-success" name="submit" id="submit" value="Сколько время?"
