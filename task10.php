@@ -25,7 +25,7 @@
                     без перезагрузки.</h5>
             </div>
             <div class="col-sm-12 justify-content-center">
-                <form action="" method="POST">
+                <form action="">
                     <fieldset>
                         <h5>Пожалуйста, выберите город для отображения времени: </h5><br>
                         <label for="town">Страна, город:</label>

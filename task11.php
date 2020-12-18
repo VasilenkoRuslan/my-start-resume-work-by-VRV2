@@ -1,15 +1,17 @@
 <?php
-$signs = array("+", "-", "*","/");
-if (isset($_POST)) {
-    function getTaskResult($number1, $number2, $keySign)
+if (isset($_POST["firstNumber"])) {
+    function getTaskResult($number1, $number2, $Sign)
     {
-        switch ($keySign) {
-            case 0 : return $number1+$number2;
-            case 1 : return $number1-$number2;
-            case 2 : return $number1*$number2;
-            case 3 : return $number1/$number2;
+        switch ($Sign) {
+            case "+" :
+                return $number1 + $number2;
+            case "-" :
+                return $number1 - $number2;
+            case "*" :
+                return $number1 * $number2;
+            case "/" :
+                return $number1 / $number2;
         }
-        return '';
     }
 }
 ?>
@@ -35,13 +37,12 @@ if (isset($_POST)) {
                                     <?php
                                 }
                                 ?>
-                            required>
-                            <select class="default-select" name="keySign">
-                                <?php foreach ($signs as $key => $mathSign) { ?>
-                                    <option value="<?= $key; ?>" <?= ($key==$_POST["keySign"]) ? 'selected' : ''; ?>><?= $mathSign; ?></option>
-                                    <?php
-                                }
-                                ?>
+                                   required>
+                            <select class="default-select" name="mathSign">
+                                <option value="+"> +</option>
+                                <option value="-"> -</option>
+                                <option value="*"> *</option>
+                                <option value="/"> /</option>
                             </select>
                             <input type="number" name="secondNumber" size="12" maxlength="5" placeholder="Второе число"
                                 <?php
@@ -50,7 +51,7 @@ if (isset($_POST)) {
                                     <?php
                                 }
                                 ?>
-                            required>
+                                   required>
                         </label>
                         <input type="submit" class="btn btn-success" value="     =     ">
                     </fieldset>
@@ -59,14 +60,14 @@ if (isset($_POST)) {
             <div class="col-md-10 jumbotron text-center">
                 <?php
                 if (isset($_POST["firstNumber"])) {
-                    if ($_POST["keySign"] == 3 && $_POST["secondNumber"] == 0) {?>
+                    if ($_POST["mathSign"] == "/" && $_POST["secondNumber"] == 0) { ?>
                         <p class="text-danger">На ноль делить нельзя!</p>
                         <?php
                         exit();
                     }
-                        ?>
-                <h5> <?= getTaskResult($_POST["firstNumber"], $_POST["secondNumber"], $_POST["keySign"]); ?> </h5>
-                <?php
+                    ?>
+                    <h5> <?= getTaskResult($_POST["firstNumber"], $_POST["secondNumber"], $_POST["mathSign"]); ?> </h5>
+                    <?php
                 }
                 ?>
             </div>
