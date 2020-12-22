@@ -3,7 +3,7 @@
 if (isset($_SERVER['HTTP_REFERER'])) {
     $address = $_SERVER['HTTP_REFERER'];
     global $mysqlConnect;
-    $sql = $mysqlConnect->prepare("CREATE TABLE IF NOT EXISTS `addresses1`
+    $sql = $mysqlConnect->prepare("CREATE TABLE IF NOT EXISTS `addresses`
  ( `id` INT(11) NOT NULL AUTO_INCREMENT , 
  `address` TEXT NOT NULL , 
  `date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
