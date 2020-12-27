@@ -1,7 +1,7 @@
 <?php include('init_db.php'); ?>
 <?php
 $howMachToOneBtnTasks = 5;
-$howMachBtn = 6;
+$howMachBtn = 7;
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
