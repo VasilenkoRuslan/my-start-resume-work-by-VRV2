@@ -1,66 +1,44 @@
 <?php require "header.php"; ?>
-<?php
-$pathToDir = "filesForDownload";
-function getAddressFile($pathToDir)
-{
-    $pictures = [];
-    if (file_exists($pathToDir)) {
-        $dir = opendir($pathToDir);
-        while (($file = readdir($dir)) !== false) {
-            if ($file == '.' || $file == '..') {
-                continue;
-            }
-            $pictures[] = $pathToDir . '/' . $file;
-        }
-        closedir($dir);
-    }
-    return $pictures;
-}
-
-function showFile($pathToFile)
-{ ?>
-    <option value="<?= $pathToFile; ?>"><?= $pathToFile; ?></option>
-    <?php
-}
-
-?>
-<section class="tasks bg-info">
-    <div class="container bg-light borderForm">
-        <div class="row justify-content-center">
-            <form action="" method="POST">
-                <label for="">Выберите файл из каталога<br>
-                    <select name="addressFileDownload">
-                        <option></option>
-                        <?php
-                        $pictures = getAddressFile($pathToDir);
-                        foreach ($pictures as $pic) {
-                            showFile($pic);
-                        }
-                        ?>
-                    </select>
-                </label>
-                <input type="submit" value="Скачать файл" class="btn btn-outline-info">
-            </form>
-            <br>
-            <?php
-            if (isset($_POST["addressFileDownload"]) && $_POST["addressFileDownload"] !== "") { ?>
-                <div class="col-sm-12 jumbotron text-left">
-                    <h3>Ссылка для скачивания файла <?= substr($_POST["addressFileDownload"], -15); ?></h3>
-                    <a href="<?= $_POST["addressFileDownload"]; ?>" class="btn btn-success col-sm-12"
-                       download><?= substr($_POST["addressFileDownload"], -15); ?></a>
-                </div>
+    <section class="tasks bg-info">
+        <div class="container bg-light borderForm">
+            <div class="row justify-content-center">
                 <?php
-            }
-            ?>
+                $pathToDir = "filesForDownload";
+                $pathFiles = [];
+                if (file_exists($pathToDir)) {
+                $dir = opendir($pathToDir);
+                while (($file = readdir($dir)) !== false) {
+                    if ($file == '.' || $file == '..') {
+                        continue;
+                    }
+                    $pathFiles["path"][] = $pathToDir . '/' . $file;
+                    $pathFiles["name"][] = $file;
+                }
+                closedir($dir);
+                $howMachFiles = count($pathFiles["path"]);
 
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <p><a href="task17uploadFile.php" class="btn btn-success">upload file</a>
-                    <a href="task17showPicture.php" class="btn btn-success">show pictures</a></p>
+                for ($i = 0;
+                $i < $howMachFiles;
+                $i++) {
+                    $typeFile=explode("/",mime_content_type($pathFiles["path"][$i]));
+                if ($typeFile[0] === "image") { ?>
+                <a href="<?= $pathFiles["path"][$i]; ?>" download><img src="<?= $pathFiles["path"][$i]; ?>"
+                                                              alt="<?= $pathFiles["name"][$i]; ?>" height="150px"></a><br>
+                    <?php }
+                    if ($typeFile[0] !== "image") { ?>
+                        <a href="<?= $pathFiles["path"][$i]; ?>" download><?= $pathFiles["name"][$i]; ?></a><br>
+                    <?php }
+                    }
+                    }
+                    ?>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p><a href="task17uploadFile.php" class="btn btn-success">upload file</a>
+                        <a href="task17showPicture.php" class="btn btn-success">show pictures</a></p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 <?php require "footer.php"; ?>

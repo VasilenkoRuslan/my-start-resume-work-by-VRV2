@@ -1,0 +1,6 @@
+Сброс триала
+Удаляем файлы (я просто переименовал):
+/home/<your PC>/.config/JetBrains/PhpStorm[version]/eval/PhpStorm[version].evaluation.key
+/home/<your PC>/.config/JetBrains/PhpStorm[version]/options/other.xml
+Удаляем папку (я просто переименовал):
+/home/<your PC>/.java/.userPrefs/jetbrains/phpstorm

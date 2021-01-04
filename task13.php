@@ -1,4 +1,7 @@
 <?php require "header.php"; ?>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/task13.css">
+</head>
 <section class="tasks bg-info">
     <div class="container bg-light borderForm">
         <div class="row">

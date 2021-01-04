@@ -9,101 +9,7 @@ $varAnswer = array(
 ?>
 <?php require "header.php"; ?>
     <head>
-        <title>
-
-        </title>
-        <style>
-            #window {
-                /*min-height: 70%;*/
-                max-height: 100%;
-                margin: 15% auto;
-                z-index: 150;
-                display: none;
-                left: 0;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                position: fixed;
-                overflow-y: auto;
-                overflow-x: hidden;
-            }
-
-            #gray {
-                background-color: rgba(1, 1, 1, 0.6);
-                position: fixed;
-                left: 0;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                z-index: 102;
-                display: none;
-            }
-
-            #for_close_back {
-                position: fixed;
-                opacity: 0;
-                visibility: hidden;
-            }
-
-            .popup {
-                position: fixed;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(1, 1, 1, 0.6);
-                top: 0;
-                left: 0;
-                opacity: 0;
-                visibility: hidden;
-                overflow-y: auto;
-                overflow-x: hidden;
-            }
-
-            .popup:target {
-                opacity: 1;
-                visibility: visible;
-            }
-
-            .popup_area {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-            }
-
-            .popup_body {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 30px 20px;
-                transition: all 0.8s ease 0s;
-                margin: 5% auto;
-            }
-
-            .popup_content {
-                min-height: 80%;
-                max-width: 90%;
-                min-width: 60%;
-                padding: 30px;
-                position: relative;
-            }
-
-            .popup_close {
-                position: absolute;
-                right: 10px;
-                top: 10px;
-                font-size: 2em;
-                color: darkblue;
-
-            }
-
-            .popup_form {
-            }
-
-            .popup_h3 {
-                color: mediumslateblue;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="css/task14.css">
     </head>
     <body>
 <section class="tasks bg-info">
@@ -119,18 +25,36 @@ $varAnswer = array(
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
-                <p class="result_answer">
-                    <button type="button" class="btn btn-lg btn-warning startAlert" onclick="fadeForm();">Нажмите,
+                <p class="result_answer"></p>
+                <button type="button" class="btn btn-lg btn-warning startAlert" onclick="fadeForm();">Нажмите,
+                    пожалуйста,
+                    кнопку!!!
+                </button>
+                <br><br>
+
+
+                <div class="checkbox_div">
+                    <input type="checkbox" id="checkbox_input">
+                    <label for="checkbox_input" class="btn btn-lg btn-warning">Нажмите,
                         пожалуйста,
-                        кнопку!!!
-                    </button>
-                    <br><br>
-                    <a href="#popup" class="btn btn-lg btn-warning" onclick="">Нажмите,
-                        пожалуйста,
-                        кнопку!!!
-                    </a>
-                    <br>
-                </p>
+                        кнопку!!!</label>
+                    <label for="checkbox_input" id="gray2"></label>
+                    <div class="container" id="window2">
+                        <div class="form text-center bg-warning borderForm alert">
+                            <form action="" name="form_1">
+                                <label for="checkbox_input" class="popup-closer">&#215;</label>
+                                <h3 class="popup_h3">Любите ли ВЫ футбол?</h3><br>
+                                <?php foreach ($varAnswer as $colorButton => $answer) { ?>
+                                <label for="checkbox_input" class="btn btn-lg btn-outline-<?= $colorButton; ?>"
+                                            onclick="getTextThankYou();"><?= $answer; ?></label>
+                                    <br><br>
+                                    <?php
+                                }
+                                ?>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -151,29 +75,6 @@ $varAnswer = array(
                 }
                 ?>
             </form>
-        </div>
-    </div>
-
-    <div id="for_close_back"></div>
-    <div class="popup" id="popup">
-        <a href="#for_close_back" class="popup_area"></a>
-        <div class="popup_body">
-            <div class="popup_content bg-warning  text-center borderForm">
-                <a href="#for_close_back" class="popup_close">
-                    <span><i class="far fa-times-circle"></i></span></a>
-                <div class="popup_form">
-                    <form action="">
-                        <h3 style="margin-left: 2em; color: mediumslateblue">Любите ли ВЫ футбол?</h3><br>
-                        <?php foreach ($varAnswer as $colorButton => $answer) { ?>
-                            <a href="#for_close_back" class="btn btn-lg btn-outline-<?= $colorButton; ?>"
-                               onclick="getTextThankYou();"><?= $answer; ?></a>
-                            <br><br>
-                            <?php
-                        }
-                        ?>
-                    </form>
-                </div>
-            </div>
         </div>
     </div>
 </section>

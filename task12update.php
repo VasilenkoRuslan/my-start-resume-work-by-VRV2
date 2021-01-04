@@ -2,7 +2,7 @@
 <?php include "header.php"; ?>
     <section class="tasks bg-info">
         <?php
-        $sql = mysqlQuery("SELECT * FROM `products` WHERE `id`={$_GET['update_id']}");
+        $sql = mysqlQuery("SELECT * FROM `products` WHERE `id`='{$_GET['update_id']}'");
         $product = mysqli_fetch_assoc($sql);
         ?>
         <br>

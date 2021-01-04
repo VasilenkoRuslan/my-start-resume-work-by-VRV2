@@ -25,15 +25,15 @@ include "header.php"; ?>
                         <?php
                         $sql = true;
                         if (isset($_GET['delete_id'])) {
-                            $sql = mysqlQuery("DELETE FROM `products` WHERE `id` = {$_GET['delete_id']}");
+                            $sql = mysqlQuery("DELETE FROM `products` WHERE `id` = '{$_GET['delete_id']}'");
                         }
 
                         if (isset($_POST['update_id'])) {
-                            $sql = mysqlQuery("UPDATE `products` SET `name` = {$_POST['name']},`price` = {$_POST['price']},`amount` = {$_POST['amount']},`provider` = {$_POST['providerCountry']},`date` = {$_POST['date']},`manager_id` = {$_POST['manager']} WHERE `id`={$_POST['update_id']}");
+                            $sql = mysqlQuery("UPDATE `products` SET `name` = '{$_POST['name']}',`price` = '{$_POST['price']}',`amount` = '{$_POST['amount']}',`provider` = '{$_POST['providerCountry']}',`date` = '{$_POST['date']}',`manager_id` = '{$_POST['manager']}' WHERE `id`='{$_POST['update_id']}'");
                         }
 
                         if (isset($_POST['create'])) {
-                            $sql = mysqlQuery("INSERT INTO `products` (`name`,`price`,`amount`,`provider`,`date`,`manager_id`) VALUES ({$_POST['name']},{$_POST['price']},{$_POST['amount']},{$_POST['providerCountry']},{$_POST['date']},{$_POST['manager']})");
+                            $sql = mysqlQuery("INSERT INTO `products` (`name`,`price`,`amount`,`provider`,`date`,`manager_id`) VALUES ('{$_POST['name']}','{$_POST['price']}','{$_POST['amount']}','{$_POST['providerCountry']}','{$_POST['date']}','{$_POST['manager']}')");
                         }
 
                         if (!$sql) {

@@ -10,6 +10,9 @@
             if (data.error) {
                 $("#result").html("<h3 style='color:darkred'>Вы не выбрали город!<br> Пожалуйста, выберите город.</h3>");
             }
+            if (data.error2) {
+                $("#result").html("<h3 style='color:darkred'>ошибка!<br> переданного ключа нет в массиве городов.</h3>");
+            }
             if (data.result) {
                 $("#result").html("<h3 style='color:lightseagreen'>"+data.nameTown+"</h3><h4 style='color:darkblue'>"+data.timeInTown+"</h4>");
             }

@@ -1,31 +1,22 @@
 <?php require "header.php"; ?>
 <?php
-$directoryForPicture = 'gallery';
-$directoryForOtherFile = 'filesForDownload';
+$_POST['upload_max_filesize'] = (1024 * 10);
+$directoryForFile = 'filesForDownload';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (!file_exists($directoryForPicture)) {
-        mkdir($directoryForPicture, 0777);
+    if (!file_exists($directoryForFile)) {
+        mkdir($directoryForFile, 0777);
     }
-
-    if (!file_exists($directoryForOtherFile)) {
-        mkdir($directoryForOtherFile, 0777);
+    if ($_FILES["userFile"]["error"][0] != 0) {
+        echo 'Upload error: Code:' . $_FILES["userFile"]["error"][0];
     }
-
-    if ($_FILES["userFile"]["error"] != 0) {
-        echo 'Upload error: Code:' . $_FILES["userFile"]["error"];
-    }
-
-    if ($_FILES["userFile"]["error"] == 0) {
-        $tmpName = $_FILES['userFile']['tmp_name'];
-        if (substr($_FILES["userFile"]['type'], 0, 6) === "image/") {
-            if (move_uploaded_file($tmpName, $directoryForPicture . '/' . time() . '.' . pathinfo($_FILES['userFile']['name'], PATHINFO_EXTENSION))) {
-                echo 'File was Saved';
-            } else echo 'Can not save file!';
-        }
-        if (substr($_FILES["userFile"]['type'], 0, 6) !== "image/") {
-            if (move_uploaded_file($tmpName, $directoryForOtherFile . '/' . time() . '.' . pathinfo($_FILES['userFile']['name'], PATHINFO_EXTENSION))) {
-                echo 'File was Saved';
-            } else echo 'Can not save file!';
+    if ($_FILES["userFile"]["error"][0] == 0) {
+        $howMuchFiles=count($_FILES["userFile"]['name']);
+        for ($n=0; $n<$howMuchFiles; $n++) {
+            $tmpName = $_FILES['userFile']['tmp_name'][$n];
+            $name= $_FILES['userFile']['name'][$n];
+            if (move_uploaded_file($tmpName, $directoryForFile . '/' . time() .$n. '.' . pathinfo($name, PATHINFO_EXTENSION))) {
+                echo "File $n was Saved";
+            } else echo "Can not save file $n!";
         }
     }
 }
@@ -36,9 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="col-md-12 jumbotron text-left bg-light">
                 <div class="form">
                     <form method="POST" enctype="multipart/form-data">
-                        <input type="hidden" name="upload_max_filesize" value="<?= (1024 * 10); ?>">
                         <label for="">
-                            <input type="file" class="btn btn-outline-warning" name="userFile">
+                            <input type="file" class="btn btn-outline-warning" name="userFile[]" multiple="multiple">
                         </label>
                         <button class="btn btn-primary">Upload</button>
                     </form>

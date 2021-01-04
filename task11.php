@@ -1,19 +1,21 @@
 <?php
-if (isset($_POST["firstNumber"])) {
-    function getTaskResult($number1, $number2, $Sign)
-    {
-        switch ($Sign) {
-            case "+" :
-                return $number1 + $number2;
-            case "-" :
-                return $number1 - $number2;
-            case "*" :
-                return $number1 * $number2;
-            case "/" :
-                return $number1 / $number2;
-        }
+function getTaskResult($number1, $number2, $Sign)
+{
+    switch ($Sign) {
+        case "+" :
+            return $number1 + $number2;
+        case "-" :
+            return $number1 - $number2;
+        case "*" :
+            return $number1 * $number2;
+        case "/" :
+            if ($number2 == 0) {
+                return "На ноль делить нельзя!";
+            }
+            return $number1 / $number2;
     }
 }
+
 ?>
 <?php require "header.php"; ?>
 <section class="tasks bg-info">
@@ -31,13 +33,7 @@ if (isset($_POST["firstNumber"])) {
                     <fieldset>
                         <label for="">Задайте два числа и действие:<br>
                             <input type="number" name="firstNumber" size="12" maxlength="5" placeholder="Первое число"
-                                <?php
-                                if (isset($_POST["firstNumber"])) { ?>
-                                    value="<?= $_POST["firstNumber"]; ?>"
-                                    <?php
-                                }
-                                ?>
-                                   required>
+                                   value='<?= isset($_POST["firstNumber"]) ? $_POST["firstNumber"] : ""; ?>' required>
                             <select class="default-select" name="mathSign">
                                 <option value="+"> +</option>
                                 <option value="-"> -</option>
@@ -45,31 +41,14 @@ if (isset($_POST["firstNumber"])) {
                                 <option value="/"> /</option>
                             </select>
                             <input type="number" name="secondNumber" size="12" maxlength="5" placeholder="Второе число"
-                                <?php
-                                if (isset($_POST["secondNumber"])) { ?>
-                                    value="<?= $_POST["secondNumber"]; ?>"
-                                    <?php
-                                }
-                                ?>
-                                   required>
+                                   value='<?= isset($_POST["secondNumber"]) ? $_POST["secondNumber"] : ""; ?>' required>
                         </label>
                         <input type="submit" class="btn btn-success" value="     =     ">
                     </fieldset>
                 </form>
             </div>
             <div class="col-md-10 jumbotron text-center">
-                <?php
-                if (isset($_POST["firstNumber"])) {
-                    if ($_POST["mathSign"] == "/" && $_POST["secondNumber"] == 0) { ?>
-                        <p class="text-danger">На ноль делить нельзя!</p>
-                        <?php
-                        exit();
-                    }
-                    ?>
-                    <h5> <?= getTaskResult($_POST["firstNumber"], $_POST["secondNumber"], $_POST["mathSign"]); ?> </h5>
-                    <?php
-                }
-                ?>
+                <?= (isset($_POST["firstNumber"])) ? getTaskResult($_POST["firstNumber"], $_POST["secondNumber"], $_POST["mathSign"]) : ""; ?>
             </div>
         </div>
     </div>

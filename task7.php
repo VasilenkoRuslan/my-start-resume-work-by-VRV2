@@ -12,18 +12,12 @@ function shieldingIfNeeded()
     if ($allTypeNumeric) {
         return $arrayArg;
     }
-    if (empty($allTypeNumeric)) {
-        foreach ($arrayArg as $key => $arg) {
-            if (is_numeric($arrayArg[$key])) {
-                $arrayArg[$key] = (string)$arg;
-            }
-            if (!is_numeric($arrayArg[$key])) {
-                $arrayArg[$key] = addslashes($arrayArg[$key]);
-            }
+    foreach ($arrayArg as $key => $arg) {
+        if (is_numeric($arrayArg[$key])) {
+            $arrayArg[$key] = (string)$arg;
         }
-        return $arrayArg;
     }
-    return '';
+    return $arrayArg;
 }
 
 ?>
@@ -47,8 +41,8 @@ function shieldingIfNeeded()
         <div class="row">
             <div class="col-sm-12 jumbotron text-left">
                 <?php
-                var_dump(shieldingIfNeeded(1,2,"ERROR'EXIT","OR",544));
-                var_dump(shieldingIfNeeded(23,15,22));
+                var_dump(shieldingIfNeeded(1, 2, "ERROR'EXIT", "OR", 544));
+                var_dump(shieldingIfNeeded(23, 15, 22));
                 ?>
             </div>
         </div>

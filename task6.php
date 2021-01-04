@@ -2,16 +2,12 @@
 if (isset($_GET)) {
     function getDiffPercent($number1, $number2)
     {
-        if (($number1 < 0 && $number2 > 0) || ($number1 > 0 && $number2 < 0)) {
-            return "Расчет не имеет смысла";
+        $numbMin = min($number1, $number2);
+        $numbMax = max($number1, $number2);
+        if ($numbMin == 0) {
+            return "На ноль делить нельзя";
         }
-        if ($number1 == 0 && $number2 == 0) {
-            return 0;
-        }
-        if ($number1 == 0 || $number2 == 0) {
-            return 100;
-        }
-        return (max(abs($number1),abs($number2)) / min(abs($number1),abs($number2)) - 1) * 100;
+        return (($numbMax / $numbMin) - 1) * 100;
     }
 }
 ?>
