@@ -2,7 +2,7 @@
 if(strpos( $_SERVER['HTTP_REFERER'], 'http://'.$_SERVER['SERVER_NAME'].'/task29.2.php' ) !== FALSE)
 {
     http_response_code(403);
-    header('Location: http://'.$_SERVER['SERVER_NAME'].'/task29.error.php');
+    echo 'No access from page'.$_SERVER['SERVER_NAME'].'/task29.2.php';
     exit();
 } ?>
 

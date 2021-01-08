@@ -1,8 +1,9 @@
 <?php require "header.php"; ?>
 <?php
-$howMachDayAdd = 10;
 $sqlQuery = mysqlQuery("SELECT *, RIGHT(`birthday`,5) AS `month_day` FROM `task20` 
-                                WHERE RIGHT(`birthday`,5)=RIGHT(DATE_ADD(CURRENT_DATE, INTERVAL $howMachDayAdd DAY),5) 
+                                WHERE RIGHT(`birthday`,5)
+                                BETWEEN RIGHT(DATE(NOW()),5)
+                                AND RIGHT(DATE_ADD(DATE(NOW()), INTERVAL 10 DAY),5) 
                                 ORDER BY RIGHT(`birthday`,5)");
 ?>
 <section class="tasks bg-info">

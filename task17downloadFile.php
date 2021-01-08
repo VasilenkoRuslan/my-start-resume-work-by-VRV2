@@ -2,6 +2,7 @@
     <section class="tasks bg-info">
         <div class="container bg-light borderForm">
             <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
                 <?php
                 $pathToDir = "filesForDownload";
                 $pathFiles = [];
@@ -31,12 +32,12 @@
                     }
                     }
                     ?>
+                </div>
             </div>
             <br>
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <p><a href="task17uploadFile.php" class="btn btn-success">upload file</a>
-                        <a href="task17showPicture.php" class="btn btn-success">show pictures</a></p>
+                    <p><a href="task17uploadFile.php" class="btn btn-success">come back to upload file</a></p>
                 </div>
             </div>
         </div>

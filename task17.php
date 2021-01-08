@@ -13,8 +13,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <p><a href="task17uploadFile.php" class="btn btn-success">upload file</a>
-                        <a href="task17showPicture.php" class="btn btn-success">show pictures</a>
+                    <p><a href="task17uploadFile.php" class="btn btn-success">upload files</a>
                         <a href="task17downloadFile.php" class="btn btn-success">download files</a></p>
                 </div>
             </div>

@@ -17,7 +17,6 @@
                         <a href="task29.2.1.php" class="btn btn-outline-info"> Перейти на task29.2.1</a>
                         <a href="task29.2.2.php" class="btn btn-outline-info"> Перейти на task29.2.2</a>
                         <a href="task29.2.3.php" class="btn btn-outline-info"> Перейти на task29.2.3</a>
-                        <a href="task29.error.php" class="btn btn-outline-info"> Перейти на task29.error</a>
                         <a href="task29.1.php" class="btn btn-outline-info"> Перейти на первый сайт(task29.1)</a>
                     </p>
                 </div>

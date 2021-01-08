@@ -17,9 +17,13 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+.btnLoadMore ~ label:before {
+    content: "Load More";
+}
+.btnLoadMore:checked ~ label:before {
+    content: "Load Less";
+}
 .btnLoadMore:checked + .content {
     -webkit-line-clamp: unset;
 }
-.btnLoadMore:checked ~ label {
-    display: none;
-}
+

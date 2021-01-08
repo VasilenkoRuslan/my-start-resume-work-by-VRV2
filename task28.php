@@ -40,17 +40,27 @@
                 if (isset($_POST["matrix1"])) {
                     $matrix1 = explode(PHP_EOL, $_POST["matrix1"]);
                     $matrix2 = explode(PHP_EOL, $_POST["matrix2"]);
-                    $maxRowsMatrix = (count($matrix1) > count($matrix2) ? count($matrix1) : count($matrix2));
+                    foreach ($matrix1 as $key => $row) {
+                        if (trim($row)=="") {
+                            unset($matrix1[$key]);
+                        }
+                    }
+                    foreach ($matrix2 as $key => $row) {
+                        if (trim($row)=="") {
+                            unset($matrix2[$key]);
+                        }
+                    }
+                    $maxRowsMatrix = max(count($matrix1), count($matrix2));
                     $maxColsMatrix = 0;
                     for ($row = 0; $row < $maxRowsMatrix; $row++) {
                         if (isset($matrix1[$row])) {
-                            $matrix1[$row] = explode(" ", $matrix1[$row]);
+                            $matrix1[$row] = explode(" ", trim($matrix1[$row]));
                         }
                         if (empty($matrix1[$row])) {
                             $matrix1[$row] = [];
                         }
                         if (isset($matrix2[$row])) {
-                            $matrix2[$row] = explode(" ", $matrix2[$row]);
+                            $matrix2[$row] = explode(" ", trim($matrix2[$row]));
                         }
                         if (empty($matrix2[$row])) {
                             $matrix2[$row] = [];

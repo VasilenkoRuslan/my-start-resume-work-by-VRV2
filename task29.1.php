@@ -10,9 +10,9 @@ if (isset($_SERVER['HTTP_REFERER'])) {
  PRIMARY KEY (`id`)) 
  COLLATE utf8_general_ci;");
     $sql->execute();
-    $sql = $mysqlConnect->prepare("INSERT INTO `addresses` (`address`) VALUES (?)");
-    $sql->bind_param("s", $address);
-    $sql->execute();
+    $sql2 = $mysqlConnect->prepare("INSERT INTO `addresses` (`address`) VALUES (?)");
+    $sql2->bind_param("s", $address);
+    $sql2->execute();
 }
 ?>
     <section class="tasks bg-info">

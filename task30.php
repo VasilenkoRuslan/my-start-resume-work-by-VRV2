@@ -77,27 +77,34 @@ COLLATE utf8_general_ci;");
             <div class="row">
                 <div class="col-md-12">
                     <?php
-                    $allLeague = $mysqlConnect->query("SELECT * FROM categories WHERE `parent_id` IS NULL");
-                    $n = 0;
-                    while ($leagues = $allLeague->fetch_assoc()) {
-                        $n++;
-                        echo $n;
-                        ?>
-                        <?= $leagues['name']; ?><br>
-                        <?php
-                        $clubsIn = $mysqlConnect->query("SELECT * FROM categories WHERE `parent_id` = {$leagues['id']}");
-                        while ($clubs = $clubsIn->fetch_assoc()) {
-                            ?>
-                            ----<?= $clubs['name']; ?><br>
-                            <?php
-                            $playersIn = $mysqlConnect->query("SELECT * FROM categories WHERE `parent_id` = {$clubs['id']}");
-                            while ($players = $playersIn->fetch_assoc()) {
-                                ?>
-                                --------<?= $players['name']; ?><br>
-                                <?php
+                    function getCategory()
+                    {
+                        global $mysqlConnect;
+                        $allLeague = $mysqlConnect->query("SELECT * FROM categories");
+                        $arrayResult = [];
+                        while ($row = $allLeague->fetch_assoc()) {
+                            $arrayResult[$row["parent_id"]][] = $row;
+                        }
+                        return $arrayResult;
+                    }
+
+                    $category_arr = getCategory();
+
+                    function outTree($parent_id, $level)
+                    {
+                        global $category_arr;
+                        if (isset($category_arr[$parent_id])) {
+                            foreach ($category_arr[$parent_id] as $value) {
+                                echo "<div style='margin-left:" . ($level * 25) . "px;'>" . $value["name"] . "</div>";
+                                $level++;
+                                outTree($value["id"], $level);
+                                $level--;
                             }
                         }
                     }
+
+                    outTree(NULL, 0);
+
                     ?>
                 </div>
             </div>

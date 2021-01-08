@@ -26,7 +26,7 @@ $howMachBoxes = 4;
                         dolor doloremque, dolores dolorum est ex facilis laboriosam nemo nobis officiis quisquam
                         repellendus repudiandae sapiente sit tempora, totam! Dignissimos eius illum maxime. Aliquam
                         consequuntur eum impedit iusto laudantium quas rem rerum saepe similique suscipit?</p>
-                    <label for="box_<?= $box; ?>" class="btn btn-outline-dark">Load More</label>
+                    <label for="box_<?= $box; ?>" class="btn btn-outline-dark"></label>
                 </div>
                 <?php
             }

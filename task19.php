@@ -10,16 +10,13 @@
             <div class="col-sm-8 justify-content-center">
                 <form action="" method="POST">
                     <fieldset>
-                        <label for="nameFile">Укажите Ваше имя:<br>
-                            <input type="text" name="name" size="52" maxlength="50" placeholder="Имя"
-                                   required>
-                        </label>
-                        <br>
-                        <label for="text">Ваш комментарий:<br>
-                            <textarea class="form-control" rows="5" cols="50" id="text" name="comment"
-                                      placeholder="Комментарий" required></textarea>
-                        </label>
-                        <br>
+                        <label for="nameFile">Укажите Ваше имя:</label><br>
+                        <input type="text" id="nameFile" class="form-control" name="name" size="50" maxlength="50"
+                               placeholder="Имя"
+                               required><br>
+                        <label for="text">Ваш комментарий:</label><br>
+                        <textarea class="form-control" rows="5" cols="50" id="text" name="comment"
+                                  placeholder="Комментарий" required></textarea><br>
                         <input type="submit" class="btn btn-success" value="Записать в БД">
                     </fieldset>
                 </form>
@@ -30,11 +27,8 @@
                 <?php
                 if (isset($_POST["name"], $_POST["comment"])) {
                     global $mysqlConnect;
-
                     $sql = $mysqlConnect->prepare("INSERT INTO `task19` (`name`,`comment`) VALUES ( ?, ?)");
-                    $name = mysqli_real_escape_string($mysqlConnect, trim($_POST["name"]));
-                    $comment = mysqli_real_escape_string($mysqlConnect, trim($_POST["comment"]));
-                    $sql->bind_param("ss", $name, $comment);
+                    $sql->bind_param("ss", $_POST["name"], $_POST["comment"]);
                     $sql->execute();
                     if (!$sql) {
                         global $mysqlConnect;

@@ -1,3 +1,11 @@
+
+<?php
+if(strpos( $_SERVER['HTTP_REFERER'], 'http://'.$_SERVER['SERVER_NAME'].'/task29.2.php' ) !== FALSE)
+{
+    http_response_code(403);
+    echo 'No access from page'.$_SERVER['SERVER_NAME'].'/task29.2.php';
+    exit();
+} ?>
 <?php require "header.php"; ?>
     <section class="tasks bg-info">
         <div class="container bg-light borderForm">
