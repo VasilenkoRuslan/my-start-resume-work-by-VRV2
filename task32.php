@@ -4,7 +4,7 @@
             $('#btn').click(function () {
                 $.ajax({
                     method: "POST",
-                    url: 'task32obr.php',
+                    url: 'task32/task32obr.php',
                     dataType: 'json',
                     data: {
                         'login': $('#login').val(),
@@ -51,6 +51,8 @@
                        placeholder="Enter Password"><br>
                 <button type="button" class="btn btn-outline-info" id="btn">Зарегестрировать</button>
             </form>
+            <div class="col-md=12 text-center"><a href="task32/" class="btn btn-warning form-control">Список
+                    пользователей(task32 CURL)</a></div>
         </div>
     </section>
 <?php require "footer.php"; ?>
