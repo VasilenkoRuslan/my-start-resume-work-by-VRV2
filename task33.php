@@ -1,4 +1,15 @@
 <?php require "header.php"; ?>
+<head>
+    <style>
+        .remove_input_btn {
+            width: 30px;
+            height: 30px;
+            font-size: 10px;
+            margin-left: 10px;
+
+        }
+    </style>
+</head>
 <section class="tasks bg-info">
     <div class="container bg-light borderForm">
         <div class="row">
@@ -32,78 +43,124 @@
     <div class="container bg-light borderForm">
         <div class="row">
             <div class="col-md-12 jumbotron text-left bg-light">
-                <form action="" methood="POST" class="form-inline">
-                    <label for="name">Your name</label>
-                    <input type="text" class="form-control" id="name" name="name">
+                <form action="" method="POST" class="text-center">
+                    <label for="name">Your full name</label>
+                    <input type="text" class="form-control" id="name" name="name"
+                           value="<?= (isset($_POST['name'])) ? $_POST['name'] : ''; ?>">
                     <label for="address">Address</label>
-                    <input type="text" class="form-control" id="address" name="address">
-                    <label for="book">Book</label>
-                    <input type="text" class="form-control" name="books[]" id="book">
-
-                    <div class="col-md-12">
-                        <button class="btn btn-success form-control-plaintext" id="addBook" name="addBook" style="margin-top: 32px" type="button">Add book</button>
+                    <input type="text" class="form-control" id="address" name="address"
+                           value="<?= (isset($_POST['address'])) ? $_POST['address'] : ''; ?>">
+                    <label for="book">Books</label>
+                    <div class="books">
+                        <div class="form-group form-inline"><input type="text" class="form-control col" name="books[]"
+                                                                   id="book">
+                            <button class="btn btn-danger remove_input_btn">x</button>
+                        </div>
                     </div>
-
-                    <div class="col buttons" style="display: inline-block">
-                    </div>
-                    <button type="submit" class="btn btn-primary" name="send" style="margin-top: 20px">Submit</button>
+                    <button class="btn btn-success form-control col-3" id="addBook" name="addBook" type="button">add
+                        book more
+                    </button>
+                    <input type="submit" class="btn btn-primary form-control" name="send" style="margin-top: 20px"
+                           value="Submit">
                 </form>
             </div>
             <?php
-            try
-            {
-            /*
             $query = "
-                CREATE TABLE readers(
+                CREATE TABLE IF NOT EXISTS readers(
                 id INT AUTO_INCREMENT PRIMARY KEY,
                 reader VARCHAR(100) NOT NULL,
                 address VARCHAR(100) NOT NULL
                );
     ";
-            $db->exec($query);
-            $query = "CREATE TABLE books(
+            mysqlQuery($query);
+            $query = "CREATE TABLE IF NOT EXISTS books(
                 id INT AUTO_INCREMENT PRIMARY KEY,
-                id_user INT,
                 book VARCHAR(50) NOT NULL,
+                id_user INT,
                 FOREIGN KEY (id_user) REFERENCES readers (id) );
         ";
-            $db->exec($query);
-           */
-            if (isset($_POST['send']))
-            {
-                $reader = $_POST['fio'];
+            mysqlQuery($query);
+            if (isset($_POST['send'])) {
+                $reader = $_POST['name'];
                 $address = $_POST['address'];
                 $books = [];
-                if(isset($_POST['books']))
-                {
-                    for($i = 0; $i < count($_POST['books']); $i++)
-                    {
-                        $books [] = $_POST['books'][$i];
+                if (isset($_POST['books'])) {
+                    for ($i = 0; $i < count($_POST['books']); $i++) {
+                        $books [$i] = $_POST['books'][$i];
                     }
                 }
-                $queryInsertReader = $db->prepare("INSERT INTO readers(reader, address) VALUES (:reader, :address)");
-                $result = $queryInsertReader->execute(array(':reader' => $reader, ':address' => $address));
-                $id = $db->lastInsertId();
-                if(isset($id))
-                {
-                    if(count($books) > 0)
-                    {
-                        $query = "INSERT INTO books (id_user, book) VALUES ($id, '{$books[0]}')";
-                        for($i = 1; $i < count($books); $i++)
-                        {
-                            $query .= ", ($id, '$books[$i]')";
+                global $mysqlConnect;
+                $queryInsertReader = $mysqlConnect->prepare("INSERT INTO `readers` (reader, address) VALUES (?, ?)");
+                $queryInsertReader->bind_param("ss", $reader, $address);
+                $queryInsertReader->execute();
+                $id = $mysqlConnect->insert_id;
+                if (isset($id)) {
+                    if (count($books) > 0) {
+                        $query = "INSERT INTO `books` (book, id_user) VALUES ('{$books[0]}', $id)";
+                        for ($n = 1; $n < count($books); $n++) {
+                            $query .= ", ('{$books[$n]}',$id)";
                         }
-                        $queryInsertBook = $db->prepare($query);
+                        $queryInsertBook = $mysqlConnect->prepare($query);
                         $queryInsertBook->execute();
                     }
                 }
             }
 
-            $queryAll = $db->query("SELECT * FROM `readers`")->fetchAll();
-
+            $queryAll = mysqlQuery("SELECT *, R.id AS redid FROM `readers` AS R LEFT JOIN `books` AS B ON B.id_user = R.id ORDER BY R.id");
             ?>
-
+            <table class="table table-dark">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Reader</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Books</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <?php
+                    $last_id_reader = "";
+                    while ($row = mysqli_fetch_assoc($queryAll)) {
+                    if ($last_id_reader === $row['redid']) {
+                    ?>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> <?= $row["book"]; ?> </td>
+                </tr>
+                <?php
+                }
+                if ($last_id_reader !== $row['redid']) {
+                    $last_id_reader = $row['redid'];
+                    ?>
+                    <tr>
+                        <td> <?= $row['redid']; ?> </td>
+                        <td> <?= $row['reader'] ?> </td>
+                        <td> <?= $row['address']; ?> </td>
+                        <td> <?= $row["book"]; ?> </td>
+                    </tr>
+                    <?php
+                }
+                }
+                ?>
+                </tbody>
+            </table>
         </div>
     </div>
 </section>
+<script>
+    $(document).ready(function () {
+        $(this).on("click", "#addBook", function () {
+            var html = '<div class="form-group form-inline"><input type="text" class="form-control col" name="books[]">';
+            html += '<button class="btn btn-danger remove_input_btn">x</button></div>';
+            $(".books").append(html);
+        });
+
+        $(this).on("click", ".remove_input_btn", function () {
+            $(this).parent().remove();
+        });
+    })
+</script>
 <?php include "footer.php"; ?>
