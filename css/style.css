@@ -8,10 +8,6 @@ ul, li {
     display: none;
 }
 
-.menu-bar {
-    padding: 20px 0;
-}
-
 .menu__item a {
     font-size: 19px;
 }
@@ -79,7 +75,7 @@ ul, li {
 }
 
 .circle + p {
-    font-size: 20px;
+    font-size: 100%;
 }
 
 .circle:hover {
@@ -129,6 +125,20 @@ ul, li {
         height: 50px;
         cursor: pointer;
     }
+    .footer {
+        padding: 100px 0 80px;
+    }
+    .footer .contact_text {
+        margin-bottom: 70px;
+    }
+}
+@media screen and (max-width: 780px) {
+    .footer {
+        padding: 70px 0 50px;
+    }
+    .footer .contact_text {
+        margin-bottom: 70px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -145,6 +155,12 @@ ul, li {
     }
 
     .footer {
-        padding: 20px;
+        padding: 40px 0 30px;
+    }
+    .footer .contact_text {
+        margin-bottom: 40px;
+    }
+    .circle + p {
+        font-size: 0.9em;
     }
 }

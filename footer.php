@@ -26,7 +26,7 @@
                     <div class="circle">
                         <i class="fas fa-envelope"></i></div>
 <!--                </a>-->
-                <p>vasilenko.ruslan0321@gmail.com</p>
+                <p>vasilenko.ruslan0321 @gmail.com</p>
             </div>
         </div>
     </div>

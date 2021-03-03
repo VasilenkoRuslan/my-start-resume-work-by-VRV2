@@ -1,7 +1,7 @@
 <?php include('init_db.php'); ?>
 <?php
-$howMachToOneBtnTasks = 5;
-$howMachBtn = 7;
+$howMachToOneBtnTasks = 10;
+$howMachBtn = 4;
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
@@ -24,15 +24,15 @@ $howMachBtn = 7;
 <header class="menu-bar">
     <div class="container">
         <div class="row">
-            <div class="col-xl-9 col-md-12">
-                <nav class="navbar navbar-expand-sm bg-white navbar-light d-flex justify-content-between">
-                    <img src="img/logo.png" alt="logo" class="logo navbar-brand float-left">
+            <div class="col-xl-12 col-md-12">
+                <nav class="navbar navbar-expand-sm bg-white navbar-light justify-content-between">
+                    <img src="img/logo.png" alt="logo" class="logo navbar-brand">
                     <button class="navbar-toggler btn btn-info bg-info" type="button" data-toggle="collapse"
                             data-target="#collapsibleNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                        <ul class="navbar-nav align-self-end">
+                    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
                             <?php for ($btn_count = 1; $btn_count <= $howMachBtn; $btn_count++) {
                                 $btn_task_number_start = (($btn_count - 1) * $howMachToOneBtnTasks + 1);
                                 $btn_task_number_finish = ($btn_count * $howMachToOneBtnTasks); ?>
@@ -52,11 +52,7 @@ $howMachBtn = 7;
                                 <?php
                             }
                             ?>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul class="navbar-nav align-self-end">
-                            <li class="nav-item menu__item"><a href="/" class="nav-link"><i
+                            <li class="nav-item"><a href="/" class="nav-link"><i
                                             class="fas fa-search text-body"></i></a></li>
                         </ul>
                     </div>
