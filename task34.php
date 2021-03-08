@@ -1,15 +1,14 @@
 <!DOCTYPE HTML>
-<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
           integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link href="css/fonts.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/slick.css">
-    <link rel="stylesheet" href="css/style2.css"
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/styleTask34.css"
     <title>Simpsons Site</title>
 </head>
 <body>
@@ -39,8 +38,8 @@
             <div class="col-xl-12">
                 <h1 class="header__title">Simpsons ROOM</h1>
                 <p class="header__text">Gomer. Bart. Lisa. Marg.</p>
-                <button class="button" >Go with Bart Simpson!</button>
-                <button class="button" >Go with Lisa Simpson!</button>
+                <button class="button">Go with Bart Simpson!</button>
+                <button class="button">Go with Lisa Simpson!</button>
             </div>
         </div>
     </div>
@@ -56,19 +55,19 @@
         </div>
         <div class="row justify-content-around">
             <div class="col-xl-3 col-md-6">
-                <img src="img/internet.png" width="100px" height="100px" alt="internet">
+                <img src="img/internet.png" alt="internet">
                 <h3 class="about__h3">Awesome Icons</h3>
                 <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua.</p>
             </div>
             <div class="col-xl-3 col-md-6">
-                <img src="img/transfer.png" width="100px" height="100px" alt="transfer">
+                <img src="img/transfer.png" alt="transfer">
                 <h3 class="about__h3">One Page</h3>
                 <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua.</p>
             </div>
             <div class="col-xl-3 col-md-6">
-                <img src="img/head.png" width="100px" height="100px" alt="head">
+                <img src="img/head.png" alt="head">
                 <h3 class="about__h3">Fully Responsive</h3>
                 <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua.</p>
@@ -88,56 +87,56 @@
         <div class="row justify-content-center">
             <div class="col-xl-4 col-md-6">
                 <div class="our_card">
-                    <image src="img/cartoon1.png" alt="" class="icon">
-                        <h3 class="about__h3">Fully Responsive</h3>
-                        <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <button class="button button-services">Read more</button>
+                    <img src="img/cartoon1.png" alt="" class="icon">
+                    <h3 class="about__h3">Fully Responsive</h3>
+                    <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="button button-services">Read more</button>
                 </div>
             </div>
             <div class="col-xl-4 col-md-6">
                 <div class="our_card">
-                    <image src="img/cartoon2.png" alt="" class="icon">
-                        <h3 class="about__h3">Fully Responsive</h3>
-                        <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <button class=" button button-services">Read more</button>
+                    <img src="img/cartoon2.png" alt="" class="icon">
+                    <h3 class="about__h3">Fully Responsive</h3>
+                    <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class=" button button-services">Read more</button>
                 </div>
             </div>
             <div class="col-xl-4 col-md-6">
                 <div class="our_card">
-                    <image src="img/cartoon3.png" alt="" class="icon">
-                        <h3 class="about__h3">Fully Responsive</h3>
-                        <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <button class="button button-services">Read more</button>
+                    <img src="img/cartoon3.png" alt="" class="icon">
+                    <h3 class="about__h3">Fully Responsive</h3>
+                    <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="button button-services">Read more</button>
                 </div>
             </div>
             <div class="col-xl-4 col-md-6">
                 <div class="our_card">
-                    <image src="img/cartoon4.png" alt="" class="icon">
-                        <h3 class="about__h3">Fully Responsive</h3>
-                        <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <button class="button button-services">Read more</button>
+                    <img src="img/cartoon4.png" alt="" class="icon">
+                    <h3 class="about__h3">Fully Responsive</h3>
+                    <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="button button-services">Read more</button>
                 </div>
             </div>
             <div class="col-xl-4 col-md-6">
                 <div class="our_card">
-                    <image src="img/cartoon5.png" alt="" class="icon">
-                        <h3 class="about__h3">Fully Responsive</h3>
-                        <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <button class="button button-services">Read more</button>
+                    <img src="img/cartoon5.png" alt="" class="icon">
+                    <h3 class="about__h3">Fully Responsive</h3>
+                    <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="button button-services">Read more</button>
                 </div>
             </div>
             <div class="col-xl-4 col-md-6">
                 <div class="our_card">
-                    <image src="img/cartoon6.png" alt="" class="icon">
-                        <h3 class="about__h3">Fully Responsive</h3>
-                        <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <button class="button button-services">Read more</button>
+                    <img src="img/cartoon6.png" alt="" class="icon">
+                    <h3 class="about__h3">Fully Responsive</h3>
+                    <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="button button-services">Read more</button>
                 </div>
             </div>
         </div>
@@ -157,37 +156,43 @@
             </div>
         </div>
         <div class="row filter">
-            <div filter="wd" class="col-xl-4 col-md-6"><img src="img/cat.jpg" class="icon2" alt="cat">
+            <div filter="wd" class="col-xl-4 col-md-6">
+                <div class="icon2"><img src="img/cat.jpg" alt="cat"></div>
                 <div class="text">
                     <h5>Hand Watch</h5>
                     <p>Web design</p>
                 </div>
             </div>
-            <div filter="moc" class="col-xl-4 col-md-6"><img src="img/watch.png" class="icon2" alt="watch">
+            <div filter="moc" class="col-xl-4 col-md-6">
+                <div class="icon2"><img src="img/watch.png" alt="watch"></div>
                 <div class="text">
                     <h5>Hand Watch</h5>
                     <p>Web design</p>
                 </div>
             </div>
-            <div filter="wd" class="col-xl-4 col-md-6"><img src="img/nation.jpg" class="icon2" alt="nation">
+            <div filter="wd" class="col-xl-4 col-md-6">
+                <div class="icon2"><img src="img/nation.jpg" alt="nation"></div>
                 <div class="text">
                     <h5>Hand Watch</h5>
                     <p>Web design</p>
                 </div>
             </div>
-            <div filter="moc" class="col-xl-4 col-md-6"><img src="img/watch.png" class="icon2" alt="cat">
+            <div filter="moc" class="col-xl-4 col-md-6">
+                <div class="icon2"><img src="img/watch.png" alt="cat"></div>
                 <div class="text">
                     <h5>Hand Watch</h5>
                     <p>Web design</p>
                 </div>
             </div>
-            <div filter="ud" class="col-xl-4 col-md-6"><img src="img/prapor.jpg" class="icon2" alt="prapor">
+            <div filter="ud" class="col-xl-4 col-md-6">
+                <div class="icon2"><img src="img/prapor.jpg" alt="prapor"></div>
                 <div class="text">
                     <h5>Hand Watch</h5>
                     <p>Web design</p>
                 </div>
             </div>
-            <div filter="ud" class="col-xl-4 col-md-6"><img src="img/watch.png" class="icon2" alt="nation">
+            <div filter="ud" class="col-xl-4 col-md-6">
+                <div class="icon2"><img src="img/watch.png" class="icon2" alt="nation"></div>
                 <div class="text">
                     <h5>Hand Watch</h5>
                     <p>Web design</p>
@@ -282,7 +287,7 @@
         </div>
         <div class="row multiple-items justify-content-around">
             <div class="teamCard col-xl-4 col-md-6">
-                <img src="img/team1.png" alt="">
+                <img src="img/team1.jpg" alt="">
                 <h4>John Doe</h4>
                 <p>General Manager</p>
                 <div class="icons">
@@ -313,7 +318,7 @@
                 </div>
             </div>
             <div class="teamCard col-xl-4 col-md-6">
-                <img src="img/team2.png" alt="">
+                <img src="img/team2.jpg" alt="">
                 <h4>Roberto Silva</h4>
                 <p>Technical Director</p>
                 <div class="icons">
@@ -344,7 +349,7 @@
                 </div>
             </div>
             <div class="teamCard col-xl-4 col-md-6">
-                <img src="img/team3.png" alt="">
+                <img src="img/team3.jpg" alt="">
                 <h4>Rob Morales</h4>
                 <p>Financial Director</p>
                 <div class="icons">
@@ -375,7 +380,7 @@
                 </div>
             </div>
             <div class="teamCard col-xl-4 col-md-6">
-                <img src="img/team4.png" alt="">
+                <img src="img/team4.jpg" alt="">
                 <h4>Alice Silva</h4>
                 <p>Commercial Director</p>
                 <div class="icons">
@@ -406,7 +411,7 @@
                 </div>
             </div>
             <div class="teamCard col-xl-4 col-md-6">
-                <img src="img/team1.png" alt="">
+                <img src="img/team1.jpg" alt="">
                 <h4>John Doe</h4>
                 <p>General Manager</p>
                 <div class="icons">
@@ -437,7 +442,7 @@
                 </div>
             </div>
             <div class="teamCard col-xl-4 col-md-6">
-                <img src="img/team2.png" alt="">
+                <img src="img/team2.jpg" alt="">
                 <h4>Roberto Silva</h4>
                 <p>Technical Director</p>
                 <div class="icons">
@@ -468,7 +473,7 @@
                 </div>
             </div>
             <div class="teamCard col-xl-4 col-md-6">
-                <img src="img/team1.png" alt="">
+                <img src="img/team1.jpg" alt="">
                 <h4>John Doe</h4>
                 <p>General Manager</p>
                 <div class="icons">
@@ -499,7 +504,7 @@
                 </div>
             </div>
             <div class="teamCard col-xl-4 col-md-6">
-                <img src="img/team2.png" alt="">
+                <img src="img/team2.jpg" alt="">
                 <h4>Roberto Silva</h4>
                 <p>Technical Director</p>
                 <div class="icons">
@@ -530,7 +535,7 @@
                 </div>
             </div>
             <div class="teamCard col-xl-4 col-md-6">
-                <img src="img/team1.png" alt="">
+                <img src="img/team1.jpg" alt="">
                 <h4>John Doe</h4>
                 <p>General Manager</p>
                 <div class="icons">
@@ -657,9 +662,10 @@
             </div>
         </div>
         <div class="row justify-content-center form">
-            <div class="col-xl-5"><input type="text" placeholder="Name"></div>
-            <div class="col-xl-5"><input type="email" placeholder="Email"></div>
-            <div class="col-xl-10"><textarea name="" id="" cols="30" rows="10" placeholder="Write Massage"></textarea>
+            <div class="col-xl-5"><label for="name"></label><input type="text" placeholder="Name" id="name"></div>
+            <div class="col-xl-5"><label for="email"></label><input type="email" placeholder="Email" id="email"></div>
+            <div class="col-xl-10"><label for="massage"></label><textarea name="" id="massage" cols="30" rows="10"
+                                                                          placeholder="Write Massage"></textarea>
             </div>
             <div class="col-xl-2 offset-xl-7">
                 <button>Send</button>
@@ -679,4 +685,3 @@
 <script type="text/javascript" src="js/slick.js"></script>
 <script type="text/javascript" src="js/main2.js"></script>
 </body>
-</html>

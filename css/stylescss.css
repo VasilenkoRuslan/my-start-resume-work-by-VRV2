@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-/*font-family: 'Montserrat', sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
-/*font-family: 'Nunito Sans', sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
-/*font-family: 'Work Sans', sans-serif; */
 * {
   margin: 0;
   padding: 0;
 }
 
 a {
+  text-decoration: none;
+}
+a:hover {
   text-decoration: none;
 }
 
@@ -44,26 +44,27 @@ body {
 }
 
 header {
-  min-height: 100px;
+  height: 100px;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.header-logo {
+header .header-logo {
   width: 2.2%;
   margin-top: 38px;
   margin-left: 7.2%;
   margin-bottom: 37px;
 }
-
-.logo-item {
+header .header-logo .logo-item {
   display: block;
   max-width: 100%;
 }
-
-.header-menu {
+header .header-logo .logo-item img {
+  width: 100%;
+  height: auto;
+}
+header .header-menu {
   list-style: none;
   float: right;
   margin-top: 45px;
@@ -74,7 +75,7 @@ header {
   align-items: center;
   justify-content: flex-end;
 }
-.header-menu a {
+header .header-menu a {
   color: #191919;
   padding: 0 14.3px;
   font-family: "Montserrat", sans-serif;
@@ -82,18 +83,18 @@ header {
   font-size: 12px;
   line-height: 24px;
   letter-spacing: 0.9px;
-  font-weight: 600;
+  font-weight: bold;
   text-align: left;
 }
-.header-menu a:hover {
+header .header-menu a:hover {
   color: #10c9c3;
   letter-spacing: 1.2px;
 }
-.header-menu #menu:hover {
+header .header-menu #menu:hover {
   color: #10c9c3;
   letter-spacing: normal;
 }
-.header-menu .icon {
+header .header-menu .icon {
   display: none;
 }
 
@@ -150,11 +151,266 @@ section .work-row div:hover {
   background-color: #10c9c3;
   opacity: 0.85;
 }
+section .banner {
+  width: 100%;
+  max-height: 350px;
+  background-image: url(../img/task36bgc-1.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-color: #7e7e7e;
+  color: #fff;
+}
+section .banner__text {
+  max-width: 512px;
+  margin: 0 auto;
+  padding: 112px 0 116px;
+  text-align: center;
+}
+section .banner__text h1 {
+  font-family: "Montserrat", sans-serif;
+  max-height: 30px;
+  font-weight: bold;
+  letter-spacing: 0.38px;
+  margin-bottom: 40px;
+}
+section .banner__text h5 {
+  max-height: 44px;
+  font-weight: 400;
+  line-height: 28px;
+}
+section .numbers {
+  width: 100%;
+  min-height: 240px;
+  background-color: #10c9c3;
+  color: #fff;
+}
+section .numbers .container1 {
+  padding: 101px 14.7% 101px 7.6%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+section .numbers .container1 .number {
+  max-width: 231px;
+  max-height: 38px;
+  display: flex;
+}
+section .numbers .container1 .number span {
+  max-width: 40px;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+}
+section .numbers .container1 .number .content {
+  max-width: 164px;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: left;
+  margin-left: 30px;
+}
+section .numbers .container1 .number .content .numb {
+  letter-spacing: 0.54px;
+}
+section .numbers .container1 .number .content .text {
+  font-size: 12px;
+}
+section .aboutMe {
+  width: 100%;
+  min-height: 570px;
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+section .aboutMe_img {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  min-height: 570px;
+  height: 100%;
+  background-image: url(../img/task36img-1.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-color: #7e7e7e;
+}
+section .aboutMe_box {
+  width: 50%;
+  max-height: 100%;
+  padding: 0 6.4%;
+}
+section .aboutMe_box__content {
+  max-width: 454px;
+  min-height: 290px;
+  text-align: left;
+}
+section .aboutMe_box__content h2 {
+  max-height: 22px;
+  color: #171717;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  margin-bottom: 40px;
+}
+section .aboutMe_box__content p {
+  color: #787878;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 27px;
+}
+section .aboutMe_box__content img {
+  max-height: 57px;
+}
+section .needAProject {
+  width: 100%;
+  min-height: 397px;
+  background-color: #fff;
+}
+section .needAProject_box {
+  max-width: 537px;
+  min-height: 194px;
+  margin: 0 auto;
+  padding: 103px 0 100px;
+  text-align: center;
+}
+section .needAProject_box .needAProject__text {
+  text-align: center;
+}
+section .needAProject_box .needAProject__text h2 {
+  max-height: 29px;
+  color: #1d1d1d;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 35px;
+  font-weight: bold;
+}
+section .needAProject_box .needAProject__text p {
+  max-height: 38px;
+  color: #787878;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 38px;
+}
+section .needAProject_box a button {
+  width: 176px;
+  height: 50px;
+  background-color: #10c9c3;
+  border: 2px solid #10c9c3;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+section .needAProject_box a button:hover {
+  border: 2px solid black;
+}
+section .contacts {
+  min-height: 410px;
+  padding: 100px 7.1%;
+  display: flex;
+  justify-content: space-between;
+}
+section .contacts .contact-info {
+  width: 31.5%;
+  min-height: 309px;
+}
+section .contacts .contact-info h2 {
+  color: #171717;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-align: left;
+  max-height: 22px;
+  padding-bottom: 41px;
+}
+section .contacts .contact-info p {
+  color: #787878;
+  font-weight: 400;
+  line-height: 24px;
+  font-style: normal;
+  text-align: left;
+  padding-bottom: 20px;
+  letter-spacing: 0.08px;
+}
+section .contacts .contact-info address {
+  color: #787878;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.08px;
+  text-align: left;
+  line-height: 36px;
+}
+section .contacts .contact-info address strong {
+  color: #171717;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  padding-right: 3px;
+}
+section .contacts .contact-form {
+  width: 57.3%;
+  min-height: 410px;
+}
+section .contacts .contact-form .form-text {
+  font-size: 15px;
+  padding-left: 3%;
+  color: #787878;
+}
+section .contacts .contact-form .contact-form-name {
+  width: 44.7%;
+  height: 48px;
+  border: none;
+}
+section .contacts .contact-form .contact-form-mail {
+  width: 44.7%;
+  height: 48px;
+  border: none;
+  float: right;
+}
+section .contacts .contact-form .contact-form-title {
+  width: 97%;
+  height: 48px;
+  border: none;
+  margin-top: 30px;
+}
+section .contacts .contact-form .contact-form-comment {
+  width: 97%;
+  height: 155px;
+  border: none;
+  padding-top: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+section .contacts .contact-form .btn {
+  width: 180px;
+  height: 54px;
+  background-color: #10c9c3;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 1.2px;
+  border: 2px solid #10c9c3;
+}
+section .contacts .contact-form .btn:hover {
+  border: 2px solid #333333;
+}
+section .map-block {
+  padding: 0 7.1% 100px;
+}
+section #map {
+  background-color: #e0e0e0;
+  width: 100%;
+  height: 470px;
+}
 
 footer {
   width: 100%;
   background-color: #141414;
-  color: #fff;
+  color: #bcbcbc;
   padding-top: 93px;
   padding-bottom: 100px;
 }
@@ -176,14 +432,12 @@ footer .content .content1 h5 {
   font-weight: 500;
 }
 footer .content .content1 p {
-  color: #bcbcbc;
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.07px;
 }
 footer .content .content2 {
-  color: #bcbcbc;
   width: 13.4%;
   position: relative;
   left: 19.5%;
@@ -219,108 +473,6 @@ footer .content .content4 p {
   letter-spacing: 0.07px;
 }
 
-.map-block {
-  padding: 0 7.1% 100px;
-}
-
-#map {
-  background-color: #e0e0e0;
-  width: 100%;
-  height: 470px;
-}
-
-.contacts {
-  min-height: 410px;
-  padding: 100px 7.1%;
-  display: flex;
-  justify-content: space-between;
-}
-.contacts .contact-info {
-  width: 31.5%;
-  min-height: 309px;
-}
-.contacts .contact-info h2 {
-  color: #171717;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  text-align: left;
-  max-height: 22px;
-  padding-bottom: 41px;
-}
-.contacts .contact-info p {
-  color: #787878;
-  font-weight: 400;
-  line-height: 24px;
-  font-style: normal;
-  text-align: left;
-  padding-bottom: 20px;
-  letter-spacing: 0.08px;
-}
-.contacts .contact-info address {
-  color: #787878;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 0.08px;
-  text-align: left;
-  line-height: 36px;
-}
-.contacts .contact-info address strong {
-  color: #171717;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-  padding-right: 3px;
-}
-.contacts .contact-form {
-  width: 57.3%;
-  min-height: 410px;
-}
-.contacts .contact-form .form-text {
-  font-size: 15px;
-  padding-left: 3%;
-  color: #787878;
-}
-.contacts .contact-form .contact-form-name {
-  width: 44.7%;
-  height: 48px;
-  border: none;
-}
-.contacts .contact-form .contact-form-mail {
-  width: 44.7%;
-  height: 48px;
-  border: none;
-  float: right;
-}
-.contacts .contact-form .contact-form-title {
-  width: 97%;
-  height: 48px;
-  border: none;
-  margin-top: 30px;
-}
-.contacts .contact-form .contact-form-comment {
-  width: 97%;
-  height: 155px;
-  border: none;
-  padding-top: 15px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-.contacts .contact-form .btn {
-  width: 180px;
-  height: 54px;
-  background-color: #10c9c3;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  color: #ffffff;
-  font-weight: 500;
-  font-size: 12px;
-  text-align: center;
-  letter-spacing: 1.2px;
-  border: 2px solid #10c9c3;
-}
-.contacts .contact-form .btn:hover {
-  border: 2px solid #333333;
-}
-
 @media screen and (max-width: 1380px) {
   section .work-row div:nth-child(2n+1) {
     background-color: #838383;
@@ -350,27 +502,72 @@ footer .content .content4 p {
     background-color: #10c9c3;
     opacity: 0.85;
   }
+  section .numbers .container1 {
+    justify-content: space-around;
+  }
+  section .numbers .container1 .number .content {
+    margin-left: 15px;
+  }
+  section .numbers .container1 .number .content .numb {
+    font-size: 1em;
+  }
 }
 @media screen and (max-width: 940px) {
   h2 {
     font-size: 1.9em;
   }
 
-  .contacts .contact-info h2 {
-    padding-bottom: 32px;
+  section .numbers .container1 {
+    padding: 70px 9% 70px 6%;
   }
-  .contacts .contact-info p {
-    padding-bottom: 18px;
+  section .numbers .container1 .number {
+    margin: 15px;
   }
-  .contacts .contact-info address {
+  section .numbers .container1 .number .content {
+    margin-left: 10px;
+  }
+  section .numbers .container1 .number .content .numb {
     font-size: 0.9em;
   }
-  .contacts .contact-info address strong {
+  section .aboutMe {
+    flex-direction: column;
+    justify-content: center;
+  }
+  section .aboutMe_img {
+    width: 80%;
+  }
+  section .aboutMe_box {
+    width: 100%;
+    max-height: 50%;
+    padding: 100px 6.4%;
+  }
+  section .aboutMe_box__content {
+    max-width: none;
+    text-align: center;
+  }
+  section .needAProject {
+    min-height: 100px;
+  }
+  section .needAProject_box {
+    max-width: 600px;
+    width: 80%;
+    min-height: 100px;
+    padding: 73px 0 66px;
+  }
+  section .contacts .contact-info h2 {
+    padding-bottom: 32px;
+  }
+  section .contacts .contact-info p {
+    padding-bottom: 18px;
+  }
+  section .contacts .contact-info address {
+    font-size: 0.9em;
+  }
+  section .contacts .contact-info address strong {
     padding-right: 0;
     font-size: 0.9em;
   }
-
-  #map {
+  section #map {
     height: 420px;
   }
 
@@ -394,7 +591,7 @@ footer .content .content4 p {
   }
 }
 @media screen and (max-width: 768px) {
-  .header-menu a {
+  header .header-menu a {
     font-size: 0.8em;
   }
 
@@ -417,75 +614,56 @@ footer .content .content4 p {
   section .header-title {
     padding: 45px 10px 60px;
   }
-
-  .contacts {
+  section .banner__text {
+    padding: 80px 20px 74px;
+  }
+  section .banner__text h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  section .banner__text h5 {
+    font-size: 1em;
+  }
+  section .contacts {
     padding: 60px 7.1%;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  .contacts .contact-info {
+  section .contacts .contact-info {
     width: 100%;
     text-align: center;
     padding-bottom: 20px;
   }
-  .contacts .contact-info h2 {
+  section .contacts .contact-info h2 {
     text-align: center;
     padding-bottom: 25px;
   }
-  .contacts .contact-info p {
+  section .contacts .contact-info p {
     font-size: 1.3em;
     text-align: left;
     padding-bottom: 13px;
   }
-  .contacts .contact-info address {
+  section .contacts .contact-info address {
     font-size: 1.2em;
     text-align: center;
     padding-bottom: 20px;
   }
-  .contacts .contact-info address strong {
+  section .contacts .contact-info address strong {
     font-size: 0.8em;
   }
-  .contacts .contact-form {
+  section .contacts .contact-form {
     width: 100%;
     min-height: 410px;
   }
-  .contacts .contact-form .contact-form-name {
+  section .contacts .contact-form .contact-form-name {
     float: left;
   }
-
-  .map-block {
+  section .map-block {
     padding-bottom: 60px;
   }
-
-  #map {
+  section #map {
     height: 400px;
-  }
-
-  footer {
-    padding-top: 70px;
-    padding-bottom: 55px;
-  }
-  footer .content {
-    padding-left: 6%;
-  }
-  footer .content .content1 {
-    width: 28%;
-  }
-  footer .content .content1 h5 {
-    padding-bottom: 12px;
-  }
-  footer .content .content2 {
-    width: 15.4%;
-    left: 5%;
-  }
-  footer .content .content3 {
-    width: 16.5%;
-    left: 16.7%;
-  }
-  footer .content .content4 {
-    width: 13.4%;
-    left: 28.6%;
   }
 
   footer {
@@ -550,6 +728,10 @@ footer .content .content4 p {
     font-size: 0.8em;
   }
 
+  header .header-logo .logo-item img {
+    width: 18px;
+  }
+
   section .work-row div:nth-child(2n+1) {
     background-color: #838383;
   }
@@ -560,52 +742,55 @@ footer .content .content4 p {
     background-color: #10c9c3;
     opacity: 0.85;
   }
-
-  .contacts {
+  section .numbers .container1 {
+    padding: 45px 9% 45px 6%;
+  }
+  section .needAProject_box .needAProject__text h2 {
+    font-size: 1.6em;
+  }
+  section .contacts {
     padding: 40px 7.1%;
   }
-  .contacts .contact-info h2 {
+  section .contacts .contact-info h2 {
     padding-bottom: 22px;
   }
-  .contacts .contact-info p {
+  section .contacts .contact-info p {
     padding-bottom: 11px;
   }
-  .contacts .contact-info address {
+  section .contacts .contact-info address {
     padding-bottom: 10px;
     font-size: 1.2em;
   }
-  .contacts .contact-info address strong {
+  section .contacts .contact-info address strong {
     font-size: 1.1em;
   }
-  .contacts .contact-form .form-text {
+  section .contacts .contact-form .form-text {
     font-size: 12px;
   }
-  .contacts .contact-form .contact-form-name {
+  section .contacts .contact-form .contact-form-name {
     width: 97%;
     height: 48px;
     margin-bottom: 30px;
   }
-  .contacts .contact-form .contact-form-mail {
+  section .contacts .contact-form .contact-form-mail {
     width: 97%;
     height: 48px;
   }
-  .contacts .contact-form .contact-form-title {
+  section .contacts .contact-form .contact-form-title {
     height: 48px;
     margin-top: 30px;
   }
-  .contacts .contact-form .contact-form-comment {
+  section .contacts .contact-form .contact-form-comment {
     height: 155px;
     border: none;
     padding-top: 15px;
     margin-top: 30px;
     margin-bottom: 30px;
   }
-
-  .map-block {
+  section .map-block {
     padding-bottom: 40px;
   }
-
-  #map {
+  section #map {
     height: 340px;
   }
 }
@@ -622,16 +807,36 @@ footer .content .content4 p {
     font-size: 1.2em;
   }
 
-  .contacts .contact-info h2 {
+  section .banner__text {
+    padding: 55px 10px 48px;
+  }
+  section .banner__text h1 {
+    font-size: 1.6em;
+    margin-bottom: 25px;
+  }
+  section .banner__text h5 {
+    font-size: 0.9em;
+  }
+  section .needAProject_box {
+    padding: 53px 0 45px;
+  }
+  section .needAProject_box .needAProject__text h2 {
+    font-size: 1.4em;
+  }
+  section .needAProject_box .needAProject__text p {
+    font-size: 1em;
+    max-height: 100px;
+  }
+  section .contacts .contact-info h2 {
     padding-bottom: 20px;
   }
-  .contacts .contact-info p {
+  section .contacts .contact-info p {
     padding-bottom: 10px;
   }
-  .contacts .contact-info address {
+  section .contacts .contact-info address {
     font-size: 1.2em;
   }
-  .contacts .contact-info address strong {
+  section .contacts .contact-info address strong {
     font-size: 1.1em;
   }
 }
@@ -652,22 +857,38 @@ footer .content .content4 p {
     font-size: 1.2em;
   }
 
-  .contacts .contact-info p {
+  section .aboutMe_img {
+    min-height: 390px;
+  }
+  section .aboutMe_box {
+    padding: 65px 0;
+    width: 80%;
+  }
+  section .needAProject_box .needAProject__text h2 {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+  }
+  section .needAProject_box .needAProject__text p {
+    max-height: 200px;
+    margin-bottom: 25px;
+  }
+  section .needAProject_box a button {
+    width: 50%;
+  }
+  section .contacts .contact-info p {
     font-size: 1em;
   }
-  .contacts .contact-info address {
+  section .contacts .contact-info address {
     padding-bottom: 0;
     font-size: 1em;
   }
-  .contacts .contact-info address strong {
+  section .contacts .contact-info address strong {
     font-size: 0.9em;
   }
-
-  .map-block {
+  section .map-block {
     padding-bottom: 30px;
   }
-
-  #map {
+  section #map {
     height: 260px;
   }
 }
@@ -684,8 +905,8 @@ footer .content .content4 p {
     font-size: 0.55em;
   }
 
-  .header-menu a {
-    font-size: 0.6em;
+  header .header-menu a {
+    font-size: 0.7em;
   }
 
   section .header-title {
@@ -697,7 +918,31 @@ footer .content .content4 p {
   section .header-title .nameSite2 {
     line-height: 21px;
   }
-
+  section .banner__text {
+    padding: 44px 10px 38px;
+  }
+  section .banner__text h1 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+  }
+  section .banner__text h5 {
+    font-size: 0.8em;
+  }
+  section .aboutMe_img {
+    width: 100%;
+    min-height: 300px;
+  }
+  section .aboutMe_box {
+    padding: 40px 0;
+    width: 80%;
+  }
+  section .aboutMe_box__content h2 {
+    margin-bottom: 30px;
+  }
+  section .needAProject_box a button {
+    width: 60%;
+    height: 36px;
+  }
   section .contacts {
     padding: 20px 7.1%;
   }
@@ -710,12 +955,10 @@ footer .content .content4 p {
   section .contacts .contact-info address strong {
     font-size: 0.7em;
   }
-
-  .map-block {
+  section .map-block {
     padding-bottom: 20px;
   }
-
-  #map {
+  section #map {
     height: 180px;
   }
 
@@ -738,7 +981,7 @@ footer .content .content4 p {
     font-size: 1.1em;
   }
 }
-@media screen and (max-width: 299px) {
+@media screen and (max-width: 300px) {
   h1 {
     font-size: 1.2em;
   }
@@ -755,17 +998,22 @@ footer .content .content4 p {
     min-width: 60px;
     min-height: 180px;
   }
+  header .header-logo {
+    margin: auto 7.2%;
+  }
+  header .header-logo .logo-item img {
+    width: 36px;
+  }
   header .header-logo.responsive {
     position: absolute;
-    top: 0;
-    left: 3px;
+    top: 25px;
+    left: 7%;
   }
   header .header-menu a {
     display: none;
   }
   header .header-menu a.icon {
     float: right;
-    margin-top: -17px;
     display: block;
     color: #191919;
     font-size: 40px;
@@ -775,9 +1023,8 @@ footer .content .content4 p {
     display: inline-block;
     float: left;
     top: 60px;
-    left: 0;
+    left: 8%;
     width: 100%;
-    background: #eee;
   }
   header .header-menu.responsive a {
     float: none;
@@ -786,36 +1033,59 @@ footer .content .content4 p {
   }
   header .header-menu.responsive a.icon {
     position: absolute;
-    top: -15px;
+    top: -36px;
   }
 
-  .map-block {
-    padding-bottom: 15px;
+  section .banner__text {
+    padding: 24px 10px 24px;
   }
-
-  #map {
-    height: 120px;
+  section .banner__text h1 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
   }
-
-  .contacts .contact-form .btn {
+  section .banner__text h5 {
+    max-height: 150px;
+    font-size: 0.8em;
+  }
+  section .numbers .container1 {
+    padding: 25px 9% 25px 6%;
+  }
+  section .numbers .container1 .number {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 200px;
+  }
+  section .numbers .container1 .number span {
+    margin: 10px auto;
+  }
+  section .numbers .container1 .number .content {
+    margin: 0;
+  }
+  section .numbers .container1 .number .content .numb {
+    text-align: center;
+  }
+  section .numbers .container1 .number .content .text {
+    font-size: 0.65em;
+  }
+  section .aboutMe_box {
+    padding: 30px 0;
+  }
+  section .aboutMe_box__content h2 {
+    margin-bottom: 25px;
+  }
+  section .aboutMe_box__content img {
+    width: 90%;
+  }
+  section .contacts .contact-form .btn {
     width: 100%;
     font-size: 10px;
   }
-}
-@media screen and (max-width: 200px) {
-  h1 {
-    font-size: 1.1em;
+  section .map-block {
+    padding-bottom: 15px;
   }
-
-  h5 {
-    font-size: 0.9em;
-  }
-
-  section .header-title .nameSite1 {
-    line-height: 25px;
-  }
-  section .header-title .nameSite2 {
-    line-height: 17px;
+  section #map {
+    height: 120px;
   }
 }
 
