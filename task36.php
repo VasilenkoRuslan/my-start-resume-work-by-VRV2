@@ -19,112 +19,118 @@
 </head>
 <body>
 <header>
-    <div class="header-logo" id="myLogo">
-        <a href="task35.php" class="logo-item">
-            <img src="img/logo.svg" alt="">
-        </a>
+    <div class="header">
+        <div class="header-logo" id="myLogo">
+            <a href="task35.php" class="logo-item">
+                <img src="img/logo.svg" alt="">
+            </a>
+        </div>
+        <ul class="header-menu" id="myMenu">
+            <li class="header-menu-item"><a href="task35.php">home</a></li>
+            <li class="header-menu-item"><a href="task36.php">about</a></li>
+            <li class="header-menu-item"><a href="task37.php">contact</a></li>
+            <li class="header-menu-item"><a href="#" id="menu" class="icon">&#9776;</a></li>
+        </ul>
     </div>
-    <ul class="header-menu" id="myMenu">
-        <li class="header-menu-item"><a href="task35.php">home</a></li>
-        <li class="header-menu-item"><a href="task36.php">about</a></li>
-        <li class="header-menu-item"><a href="task37.php">contact</a></li>
-        <li class="header-menu-item"><a href="#" id="menu" class="icon">&#9776;</a></li>
-    </ul>
 </header>
 <section>
-    <div class="banner">
-        <div class="banner__text">
-            <h1>Amelia Woods</h1>
-            <h5>I am a Graphic & Web Designer based in New York, specializing
-                in User Interface Design and Development.
-            </h5>
-        </div>
-    </div>
-    <div class="numbers">
-        <div class="container1">
-            <div class="number">
-                <span><i class="fas fa-briefcase fa-2x"></i></span>
-                <div class="content">
-                    <h5 class="numb">548</h5>
-                    <p class="text">projects completed</p></div>
-            </div>
-            <div class="number">
-                <span><i class="far fa-clock fa-2x"></i></span>
-                <div class="content">
-                    <h5 class="numb">1465</h5>
-                    <p class="text">WORKING HOURS</p>
-                </div>
-            </div>
-            <div class="number">
-                <span><i class="far fa-star fa-2x"></i></span>
-                <div class="content">
-                    <h5 class="numb">612</h5>
-                    <p class="text">POSITIVE FEEDBACKS</p>
-                </div>
-            </div>
-            <div class="number">
-                <span><i class="far fa-heart fa-2x"></i></span>
-                <div class="content">
-                    <h5 class="numb">735</h5>
-                    <p class="text">HAPPY CLIENTS</p>
-                </div>
+    <div class="section">
+        <div class="banner">
+            <div class="banner__text">
+                <h1>Amelia Woods</h1>
+                <h5>I am a Graphic & Web Designer based in New York, specializing
+                    in User Interface Design and Development.
+                </h5>
             </div>
         </div>
-    </div>
-    <div class="aboutMe">
-        <div class="aboutMe_img"></div>
-        <div class="aboutMe_box">
-            <div class="aboutMe_box__content">
-                <h2>About me</h2>
-                <p>Given let waters air sea had you'll, may seed abundantly fish.
-                    Were, you'll earth forth winged above brought. Own darkness
-                    they're him can't fourth sea place have.<br><br>
+        <div class="numbers">
+            <div class="container1">
+                <div class="number">
+                    <span><i class="fas fa-briefcase fa-2x"></i></span>
+                    <div class="content">
+                        <h5 class="numb">548</h5>
+                        <p class="text">projects completed</p></div>
+                </div>
+                <div class="number">
+                    <span><i class="far fa-clock fa-2x"></i></span>
+                    <div class="content">
+                        <h5 class="numb">1465</h5>
+                        <p class="text">WORKING HOURS</p>
+                    </div>
+                </div>
+                <div class="number">
+                    <span><i class="far fa-star fa-2x"></i></span>
+                    <div class="content">
+                        <h5 class="numb">612</h5>
+                        <p class="text">POSITIVE FEEDBACKS</p>
+                    </div>
+                </div>
+                <div class="number">
+                    <span><i class="far fa-heart fa-2x"></i></span>
+                    <div class="content">
+                        <h5 class="numb">735</h5>
+                        <p class="text">HAPPY CLIENTS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aboutMe">
+            <div class="aboutMe_img"></div>
+            <div class="aboutMe_box">
+                <div class="aboutMe_box__content">
+                    <h2>About me</h2>
+                    <p>Given let waters air sea had you'll, may seed abundantly fish.
+                        Were, you'll earth forth winged above brought. Own darkness
+                        they're him can't fourth sea place have.<br><br>
 
-                    So the above May stars cattle fruitful face shall. Tree it, winged.
-                    Every signs male firmament us. Morning him.</p>
-                <img src="img/task36-5.svg" alt="">
+                        So the above May stars cattle fruitful face shall. Tree it, winged.
+                        Every signs male firmament us. Morning him.</p>
+                    <img src="img/task36-5.svg" alt="">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="needAProject">
-        <div class="needAProject_box">
-            <div class="needAProject__text">
-                <h2>Need a Project?</h2>
-                <p>Let us know what you're looking for in an agency. We'll take a look and see
-                    if this could be the start of something beautiful.</p>
+        <div class="needAProject">
+            <div class="needAProject_box">
+                <div class="needAProject__text">
+                    <h2>Need a Project?</h2>
+                    <p>Let us know what you're looking for in an agency. We'll take a look and see
+                        if this could be the start of something beautiful.</p>
+                </div>
+                <a href="#">
+                    <button>let’s talk</button>
+                </a>
             </div>
-            <a href="#">
-                <button>let’s talk</button>
-            </a>
         </div>
     </div>
 </section>
 <footer>
-    <div class="content">
-        <div class="content1">
-            <h5>Piroll Design, Inc.</h5>
-            <p>© 2017 Piroll. All rights reserved.<br>
-                Designed by robirurk.</p>
-        </div>
-        <div class="content2">
-            <p>hello@pirolltheme.com<br>
-                +44 987 065 908 </p>
-        </div>
-        <div class="content3">
-            <p>Projects<br>
-                About<br>
-                Services<br>
-                Carreer</p>
-            <p>News<br>
-                Events<br>
-                Contact<br>
-                Legals</p>
-        </div>
-        <div class="content4">
-            <p>Facebook<br>
-                Twitter<br>
-                Instagram<br>
-                Dribbble</p>
+    <div class="footer">
+        <div class="content">
+            <div class="content1">
+                <h5>Piroll Design, Inc.</h5>
+                <p>© 2017 Piroll. All rights reserved.<br>
+                    Designed by robirurk.</p>
+            </div>
+            <div class="content2">
+                <p>hello@pirolltheme.com<br>
+                    +44 987 065 908 </p>
+            </div>
+            <div class="content3">
+                <p><a href="task35.php">Projects</a><br>
+                    <a href="task36.php">About</a><br>
+                    <a href="task35.php">Services</a><br>
+                    <a href="task35.php">Carreer</a></p>
+                <p><a href="task35.php">News</a><br>
+                    <a href="task35.php">Events</a><br>
+                    <a href="task37.php">Contact</a><br>
+                    <a href="task37.php">Legals</a></p>
+            </div>
+            <div class="content4">
+                <p><a href="https://ru-ru.facebook.com">Facebook</a><br>
+                    <a href="https://twitter.com/">Twitter</a><br>
+                    <a href="https://www.instagram.com/">Instagram</a><br>
+                    <a href="https://dribbble.com/">Dribbble</a></p>
+            </div>
         </div>
     </div>
 </footer>

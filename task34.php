@@ -1,6 +1,8 @@
 <!DOCTYPE HTML>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=4.0, minimum-scale=1.0">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -54,19 +56,19 @@
             </div>
         </div>
         <div class="row justify-content-around">
-            <div class="col-xl-3 col-md-6">
+            <div class="col-xl-3 col-md-4">
                 <img src="img/internet.png" alt="internet">
                 <h3 class="about__h3">Awesome Icons</h3>
                 <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua.</p>
             </div>
-            <div class="col-xl-3 col-md-6">
+            <div class="col-xl-3 col-md-4">
                 <img src="img/transfer.png" alt="transfer">
                 <h3 class="about__h3">One Page</h3>
                 <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua.</p>
             </div>
-            <div class="col-xl-3 col-md-6">
+            <div class="col-xl-3 col-md-4">
                 <img src="img/head.png" alt="head">
                 <h3 class="about__h3">Fully Responsive</h3>
                 <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -216,7 +218,7 @@
             </div>
         </div>
         <div class="row justify-content-around">
-            <div class="col-xl-4 col-md-6">
+            <div class="col-xl-4 col-md-4">
                 <div class="price">
                     <div class="price__head">
                         <p>Free Trail</p>
@@ -235,7 +237,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-md-6">
+            <div class="col-xl-4 col-md-4">
                 <div class="price">
                     <div class="price__head">
                         <p>Basic</p>
@@ -254,7 +256,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-md-6">
+            <div class="col-xl-4 col-md-4">
                 <div class="price">
                     <div class="price__head">
                         <p>Ultimates</p>
