@@ -35,20 +35,20 @@
         </div>
         <div class="work">
             <div class="work-row">
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
+                <div><img src="img/img_1.jpg" alt="toys"></div>
+                <div><img src="img/img_2.jpg" alt="wolves"></div>
+                <div><img src="img/img_3.jpg" alt="dog"></div>
+                <div><img src="img/img_4.jpg" alt="fruit"></div>
 
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
+                <div><img src="img/img_5.jpg" alt="world"></div>
+                <div><img src="img/img_6.jpg" alt="ship"></div>
+                <div><img src="img/img_7.jpg" alt="child"></div>
+                <div><img src="img/img_8.jpg" alt="cloud"></div>
 
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
+                <div><img src="img/img_9.jpg" alt="breakfast"></div>
+                <div><img src="img/img_10.jpg" alt="soup"></div>
+                <div><img src="img/img_11.jpg" alt="air-ball"></div>
+                <div><img src="img/img_1.jpg" alt="toys"></div>
             </div>
         </div>
     </div>

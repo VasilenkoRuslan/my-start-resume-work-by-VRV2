@@ -147,7 +147,7 @@
 <section class="portfolio" id="portfolio">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-xl-8">
+            <div class="col-xl-8 col-md-12">
                 <h2 class="portfolio__h2">Latest Work</h2>
                 <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua.</p>
@@ -157,44 +157,44 @@
                 <button val="off" class="button" filter="moc">Mockups</button>
             </div>
         </div>
-        <div class="row filter">
-            <div filter="wd" class="col-xl-4 col-md-6">
-                <div class="icon2"><img src="img/cat.jpg" alt="cat"></div>
+        <div class="row justify-content-center filter">
+            <div filter="wd" class="col-xl-4 col-md-6 col-sm-10 justify-content-center">
+                <div class="icon2"><div class="forImg"><img src="img/cat.jpg" alt="cat"></div></div>
                 <div class="text">
                     <h5>Hand Watch</h5>
                     <p>Web design</p>
                 </div>
             </div>
-            <div filter="moc" class="col-xl-4 col-md-6">
-                <div class="icon2"><img src="img/watch.png" alt="watch"></div>
+            <div filter="moc" class="col-xl-4 col-md-6 col-sm-10 justify-content-center">
+                <div class="icon2"><div class="forImg"><img src="img/watch.png" alt="watch"></div></div>
                 <div class="text">
                     <h5>Hand Watch</h5>
                     <p>Web design</p>
                 </div>
             </div>
-            <div filter="wd" class="col-xl-4 col-md-6">
-                <div class="icon2"><img src="img/nation.jpg" alt="nation"></div>
+            <div filter="wd" class="col-xl-4 col-md-6 col-sm-10 justify-content-center">
+                <div class="icon2"><div class="forImg"><img src="img/nation.jpg" alt="nation"></div></div>
                 <div class="text">
                     <h5>Hand Watch</h5>
                     <p>Web design</p>
                 </div>
             </div>
-            <div filter="moc" class="col-xl-4 col-md-6">
-                <div class="icon2"><img src="img/watch.png" alt="cat"></div>
+            <div filter="moc" class="col-xl-4 col-md-6 col-sm-10 justify-content-center">
+                <div class="icon2"><div class="forImg"><img src="img/img_10.jpg" alt="soup"></div></div>
                 <div class="text">
                     <h5>Hand Watch</h5>
                     <p>Web design</p>
                 </div>
             </div>
-            <div filter="ud" class="col-xl-4 col-md-6">
-                <div class="icon2"><img src="img/prapor.jpg" alt="prapor"></div>
+            <div filter="ud" class="col-xl-4 col-md-6 col-sm-10 justify-content-center">
+                <div class="icon2"><div class="forImg"><img src="img/img_3.jpg" alt="dog"></div></div>
                 <div class="text">
                     <h5>Hand Watch</h5>
                     <p>Web design</p>
                 </div>
             </div>
-            <div filter="ud" class="col-xl-4 col-md-6">
-                <div class="icon2"><img src="img/watch.png" class="icon2" alt="nation"></div>
+            <div filter="ud" class="col-xl-4 col-md-6 col-sm-10 justify-content-center">
+                <div class="icon2"><div class="forImg"><img src="img/img_11.jpg" class="icon2" alt="air-ball"></div></div>
                 <div class="text">
                     <h5>Hand Watch</h5>
                     <p>Web design</p>
@@ -666,11 +666,10 @@
         <div class="row justify-content-center form">
             <div class="col-xl-5"><label for="name"></label><input type="text" placeholder="Name" id="name"></div>
             <div class="col-xl-5"><label for="email"></label><input type="email" placeholder="Email" id="email"></div>
-            <div class="col-xl-10"><label for="massage"></label><textarea name="" id="massage" cols="30" rows="10"
-                                                                          placeholder="Write Massage"></textarea>
+            <div class="col-xl-10"><label for="massage"></label><textarea name="" id="massage" cols="30" rows="10" placeholder="Write Massage"></textarea>
             </div>
-            <div class="col-xl-2 offset-xl-7">
-                <button>Send</button>
+            <div class="col-xl-3 offset-xl-7">
+                <button class="col-xl-12">Send</button>
             </div>
         </div>
     </div>

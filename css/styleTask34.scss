@@ -165,16 +165,20 @@ body {
   }
 
   .icon2 {
-    max-width: 380px;
-    width: 100%;
-    max-height: 380px;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-
-    img {
+    width: 360px;
+    height: 360px;
+    margin: 0 auto;
+    .forImg {
       width: 100%;
-      height: auto;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      img {
+        height: 100%;
+        width: auto;
+        flex-shrink: 0;
+      }
     }
   }
 
@@ -195,7 +199,7 @@ body {
 
   div[filter]:hover {
     img {
-      filter: brightness(50%);
+      filter: brightness(35%);
       transition: 0.3s;
     }
 
@@ -208,7 +212,7 @@ body {
       left: 3%;
       z-index: 3;
       text-align: center;
-      font-size: 1vh;
+      font-size: 2vh;
     }
   }
 }
@@ -495,20 +499,19 @@ body {
   }
 
   textarea {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 15px;
     resize: none;
   }
 
   button {
     font-size: 20px;
-    width: 90%;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     color: #212121;
-    padding: 20px 80px;
+    padding: 20px;
     border-radius: 10px;
     transition: 0.3s;
+    margin-top: 15px;
 
     &:hover {
       opacity: 0.4;
@@ -526,7 +529,7 @@ body {
   width: 100%;
   border-radius: 10px;
   border: none;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .footer input:focus, .footer textarea:focus {

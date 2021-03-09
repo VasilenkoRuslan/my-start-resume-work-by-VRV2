@@ -151,48 +151,19 @@ section .section .work-row div {
   flex: 1 1 341px;
   height: 300px;
   background-color: #838383;
-  background-position: 50% 50%;
-  background-size: cover;
-}
-section .section .work-row div:nth-child(1) {
-  background-image: url(../img/img_1.jpg);
-}
-section .section .work-row div:nth-child(2) {
-  background-image: url(../img/img_2.jpg);
-}
-section .section .work-row div:nth-child(3) {
-  background-image: url(../img/img_3.jpg);
-}
-section .section .work-row div:nth-child(4) {
-  background-image: url(../img/img_4.jpg);
-}
-section .section .work-row div:nth-child(5) {
-  background-image: url(../img/img_5.jpg);
-}
-section .section .work-row div:nth-child(6) {
-  background-image: url(../img/img_6.jpg);
-}
-section .section .work-row div:nth-child(7) {
-  background-image: url(../img/img_7.jpg);
-}
-section .section .work-row div:nth-child(8) {
-  background-image: url(../img/img_8.jpg);
-}
-section .section .work-row div:nth-child(9) {
-  background-image: url(../img/img_9.jpg);
-}
-section .section .work-row div:nth-child(10) {
-  background-image: url(../img/img_10.jpg);
-}
-section .section .work-row div:nth-child(11) {
-  background-image: url(../img/img_11.jpg);
-}
-section .section .work-row div:nth-child(12) {
-  background-image: url(../img/img_1.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 section .section .work-row div img {
-  width: 100%;
+  width: auto;
   height: 100%;
+  flex-shrink: 0;
+}
+section .section .work-row div img:hover {
+  background-color: #10c9c3;
+  opacity: 0.75;
 }
 section .section .work-row div:nth-child(8n+1) {
   background-color: #dddddd;
@@ -206,9 +177,8 @@ section .section .work-row div:nth-child(8n+6) {
 section .section .work-row div:nth-child(8n+8) {
   background-color: #dddddd;
 }
-section .section .work-row div:hover img {
+section .section .work-row div:hover {
   background-color: #10c9c3;
-  opacity: 0.75;
 }
 section .section .banner {
   width: 100%;
