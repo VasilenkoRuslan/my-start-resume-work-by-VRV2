@@ -718,11 +718,25 @@ body {
     padding: 20px;
   }
   .footer button {
-    padding: 20px 0;
+    padding: 10px 0;
     width: 100%;
+    margin-top: 10px;
   }
   .footer .form {
-    margin-top: 20px;
+    margin-top: 10px;
+  }
+  .footer input, .footer textarea {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 240px) {
+  .portfolio .icon2 {
+    width: 100%;
+    height: 150px;
+  }
+  .portfolio .filter {
+    padding: 0;
   }
 }
 
