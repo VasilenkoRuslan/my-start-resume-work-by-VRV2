@@ -159,42 +159,54 @@
         </div>
         <div class="row justify-content-center filter">
             <div filter="wd" class="col-xl-4 col-md-6 col-sm-10 justify-content-center">
-                <div class="icon2"><div class="forImg"><img src="img/cat.jpg" alt="cat"></div></div>
+                <div class="icon2">
+                    <div class="forImg"><img src="img/cat.jpg" alt="cat"></div>
+                </div>
                 <div class="text">
                     <h5>Hand Watch</h5>
                     <p>Web design</p>
                 </div>
             </div>
             <div filter="moc" class="col-xl-4 col-md-6 col-sm-10 justify-content-center">
-                <div class="icon2"><div class="forImg"><img src="img/watch.png" alt="watch"></div></div>
+                <div class="icon2">
+                    <div class="forImg"><img src="img/watch.png" alt="watch"></div>
+                </div>
                 <div class="text">
                     <h5>Hand Watch</h5>
                     <p>Web design</p>
                 </div>
             </div>
             <div filter="wd" class="col-xl-4 col-md-6 col-sm-10 justify-content-center">
-                <div class="icon2"><div class="forImg"><img src="img/nation.jpg" alt="nation"></div></div>
+                <div class="icon2">
+                    <div class="forImg"><img src="img/nation.jpg" alt="nation"></div>
+                </div>
                 <div class="text">
                     <h5>Hand Watch</h5>
                     <p>Web design</p>
                 </div>
             </div>
             <div filter="moc" class="col-xl-4 col-md-6 col-sm-10 justify-content-center">
-                <div class="icon2"><div class="forImg"><img src="img/img_10.jpg" alt="soup"></div></div>
+                <div class="icon2">
+                    <div class="forImg"><img src="img/img_10.jpg" alt="soup"></div>
+                </div>
                 <div class="text">
                     <h5>Hand Watch</h5>
                     <p>Web design</p>
                 </div>
             </div>
             <div filter="ud" class="col-xl-4 col-md-6 col-sm-10 justify-content-center">
-                <div class="icon2"><div class="forImg"><img src="img/img_3.jpg" alt="dog"></div></div>
+                <div class="icon2">
+                    <div class="forImg"><img src="img/img_3.jpg" alt="dog"></div>
+                </div>
                 <div class="text">
                     <h5>Hand Watch</h5>
                     <p>Web design</p>
                 </div>
             </div>
             <div filter="ud" class="col-xl-4 col-md-6 col-sm-10 justify-content-center">
-                <div class="icon2"><div class="forImg"><img src="img/img_11.jpg" class="icon2" alt="air-ball"></div></div>
+                <div class="icon2">
+                    <div class="forImg"><img src="img/img_11.jpg" class="icon2" alt="air-ball"></div>
+                </div>
                 <div class="text">
                     <h5>Hand Watch</h5>
                     <p>Web design</p>
@@ -666,7 +678,8 @@
         <div class="row justify-content-center form">
             <div class="col-xl-5"><label for="name"></label><input type="text" placeholder="Name" id="name"></div>
             <div class="col-xl-5"><label for="email"></label><input type="email" placeholder="Email" id="email"></div>
-            <div class="col-xl-10"><label for="massage"></label><textarea name="" id="massage" cols="30" rows="10" placeholder="Write Massage"></textarea>
+            <div class="col-xl-10"><label for="massage"></label><textarea name="" id="massage" cols="30" rows="10"
+                                                                          placeholder="Write Massage"></textarea>
             </div>
             <div class="col-xl-3 offset-xl-7">
                 <button class="col-xl-12">Send</button>

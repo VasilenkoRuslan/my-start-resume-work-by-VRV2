@@ -30,7 +30,8 @@
     <div class="section">
         <div class="header-title">
             <div class="nameSite1"><h1>UI/UX & Graphic Designer</h1></div>
-            <div class="nameSite2"><h5>I am a Graphic & Web Designer based in New York, specializing<br> in User Interface
+            <div class="nameSite2"><h5>I am a Graphic & Web Designer based in New York, specializing<br> in User
+                    Interface
                     Design and Development.</h5></div>
         </div>
         <div class="work">

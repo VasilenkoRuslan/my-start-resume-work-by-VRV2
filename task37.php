@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/stylescss.css">
     <title>First project</title>
     <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkWlWThgmaiVzuwd6OIVkaenThF9nTBTc&callback=initMap" type="text/javascript">
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkWlWThgmaiVzuwd6OIVkaenThF9nTBTc&callback=initMap"
+            type="text/javascript">
     </script>
 </head>
 <body>
@@ -38,10 +39,10 @@
                     upon. Light hath subdue. Life days creature upon
                     first heaven gathering dry.
                 </p>
-                <address><strong>Address:</strong>  10111 Santa Monica Boulevard, LA<br></address>
-                <address><strong>Phone:</strong>  +44 987 065 908<br></address>
-                <address><strong>Email:</strong>  info@Example.com</address>
-                <address><strong>Fax:</strong>  +44 987 065 909</address>
+                <address><strong>Address:</strong> 10111 Santa Monica Boulevard, LA<br></address>
+                <address><strong>Phone:</strong> +44 987 065 908<br></address>
+                <address><strong>Email:</strong> info@Example.com</address>
+                <address><strong>Fax:</strong> +44 987 065 909</address>
             </div>
             <div class="contact-form">
                 <form action="">
@@ -49,7 +50,8 @@
                         <input class="contact-form-name form-text" type="text" placeholder="Your Name">
                         <input class="contact-form-mail form-text" type="email" placeholder="Your Email">
                         <input class="contact-form-title form-text" type="text" placeholder="Your Title">
-                        <textarea class="contact-form-comment form-text" cols="170" rows="670px" placeholder="Your Comment"></textarea><br>
+                        <textarea class="contact-form-comment form-text" cols="170" rows="670px"
+                                  placeholder="Your Comment"></textarea><br>
                     </label>
                     <input class="btn" type="button" value="send message">
                 </form>

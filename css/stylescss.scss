@@ -130,6 +130,7 @@ header {
 
 section {
   background-color: #f5f5f5;
+
   .section {
     max-width: 1366px;
     width: 100%;
@@ -179,6 +180,7 @@ section {
           width: auto;
           height: 100%;
           flex-shrink: 0;
+
           &:hover {
             background-color: #10c9c3;
             opacity: 0.75;
@@ -200,6 +202,7 @@ section {
         &:nth-child(8n+8) {
           background-color: #dddddd;
         }
+
         &:hover {
           background-color: #10c9c3;
         }
@@ -506,6 +509,7 @@ section {
 
 footer {
   background-color: #141414;
+
   .footer {
     max-width: 1366px;
     width: 100%;
@@ -611,7 +615,7 @@ footer {
 }
 
 @media screen and (max-width: 1034px) {
-  section .section{
+  section .section {
     .work-row div {
       &:nth-child(4n+1) {
         background-color: #838383;
@@ -1327,14 +1331,16 @@ footer {
   header .header {
     min-width: 60px;
     min-height: 180px;
-      .header-logo {
-        margin: auto 7.2%;
-        .logo-item {
-          img {
-            width: 36px;
-          }
+
+    .header-logo {
+      margin: auto 7.2%;
+
+      .logo-item {
+        img {
+          width: 36px;
         }
       }
+    }
 
     .header-logo.responsive {
       position: absolute;
@@ -1343,9 +1349,10 @@ footer {
     }
 
     .header-menu {
-        &-item:nth-child(4) {
-          width: 98px;
-        }
+      &-item:nth-child(4) {
+        width: 98px;
+      }
+
       a {
         display: none;
 
