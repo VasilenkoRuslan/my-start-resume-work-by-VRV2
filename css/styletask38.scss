@@ -56,10 +56,11 @@ p {
 header {
   max-width: 1200px;
   height: auto;
+  max-height: 163px;
   margin: 0 auto;
 
   .header {
-    padding: 68px 5.6% 69px;
+    padding: 68px 5.6% 72px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,7 +82,7 @@ header {
       max-width: 585px;
       width: 100%;
       max-height: 11px;
-      margin-top: -15px;
+      margin-top: -13px;
       ul {
         display: flex;
         justify-content: space-between;
@@ -124,6 +125,7 @@ section {
 
   .first-post {
     max-width: 1061px;
+    max-height: 989px;
     margin: 0 auto;
 
     &__img {
@@ -139,17 +141,25 @@ section {
     }
 
     &-content {
+
       width: 90%;
       max-width: 893px;
       height: auto;
       margin: 0 auto;
       padding-top: 99px;
-      padding-bottom: 32px;
+      padding-bottom: 40px;
       h2 {
-        margin-top: -12px;
+        margin-left: -3px;
+        margin-top: -4px;
       }
       p {
-        margin-top: -6px;
+        margin-top: -9px;
+        margin-left: -3px;
+      }
+      h5 {
+        max-height: 11px;
+        margin-top: -4px;
+        margin-left: -3px;
       }
       .btnLoadMore {
         opacity: 0;
@@ -159,7 +169,7 @@ section {
 
       label + h5 {
         padding-top: 52px;
-        margin-top: -8px;
+        margin-top: -6px;
       }
     }
   }
@@ -171,13 +181,13 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 103px;
+    padding-top: 102px;
 
     &-box {
-      max-width: 45%;
+      max-width: 43.75%;
       display: flex;
       flex-direction: column;
-      padding: 0 2.5% 122px;
+      padding: 0 3.125% 105px;
       text-align: left;
 
       &-content {
@@ -196,6 +206,7 @@ section {
 
         .btnLoadMore ~ label:before {
           content: "Load More";
+          padding-top: 50px;
         }
 
         .btnLoadMore:checked ~ label:before {
@@ -216,6 +227,17 @@ section {
             color: #fff;
           }
         }
+        h5 {
+          max-height: 11px;
+          margin-top: -7px;
+        }
+        h2 {
+          max-height: 30px;
+          margin-top: -4px;
+        }
+        p {
+          margin-top: 3px;
+        }
       }
 
       &__img {
@@ -231,10 +253,12 @@ section {
     }
 
     .btn_loadMore {
-      margin: 165px auto;
+      margin: 35px auto 98px;
 
       button {
         padding: 21px 34px;
+        min-width: 164px;
+        min-height: 60px;
         color: #626262;
         background-color: inherit;
         border: 1px solid #626262;
@@ -256,6 +280,8 @@ section {
     width: 100%;
     height: auto;
     background-color: #f0f0f0;
+    margin-top: -9px;
+    max-height: 287px;
 
     &_content {
       max-width: 400px;
@@ -269,6 +295,8 @@ section {
         letter-spacing: 0.75px;
         padding-bottom: 69px;
         padding-top: 0;
+        max-height: 30px;
+        margin-top: -8px;
       }
 
       form {
@@ -276,6 +304,7 @@ section {
         display: flex;
         justify-content: space-between;;
         align-items: center;
+        margin-top: 4px;
 
         input {
           background-color: inherit;
@@ -287,7 +316,7 @@ section {
           line-height: 24px;
           text-align: left;
           margin: 0;
-          padding: 14px 0;
+          padding: 10px 0;
 
           &:active, &:focus {
             border: none;
@@ -301,6 +330,7 @@ section {
           display: flex;
           justify-content: center;
           align-items: center;
+          margin-top: 9px;
 
           &:hover {
             cursor: pointer;
@@ -328,6 +358,7 @@ footer {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    max-height: 97px;
 
     &-content {
       display: flex;
@@ -338,6 +369,7 @@ footer {
       &_left {
         display: flex;
         justify-content: flex-start;
+        margin-top: -18px;
 
         p {
           padding-right: 17px;
@@ -345,12 +377,14 @@ footer {
           line-height: 24px;
           color: #000000;
           text-align: left;
+          max-height: 12px;
         }
       }
 
       &_right {
         display: flex;
         justify-content: flex-end;
+        margin-top: -6px;
 
         p {
           padding-left: 17px;
@@ -359,11 +393,13 @@ footer {
           line-height: 24px;
           color: #000000;
           text-align: left;
+          max-height: 12px;
         }
 
         img {
-          padding-left: 17px;
+          padding-left: 20px;
           color: #626262;
+          max-height: 12px;
         }
       }
     }

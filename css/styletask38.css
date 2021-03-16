@@ -54,10 +54,11 @@ p {
 header {
   max-width: 1200px;
   height: auto;
+  max-height: 163px;
   margin: 0 auto;
 }
 header .header {
-  padding: 68px 5.6% 69px;
+  padding: 68px 5.6% 72px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,7 +79,7 @@ header .header_menu {
   max-width: 585px;
   width: 100%;
   max-height: 11px;
-  margin-top: -15px;
+  margin-top: -13px;
 }
 header .header_menu ul {
   display: flex;
@@ -113,6 +114,7 @@ section p {
 }
 section .first-post {
   max-width: 1061px;
+  max-height: 989px;
   margin: 0 auto;
 }
 section .first-post__img {
@@ -131,13 +133,20 @@ section .first-post-content {
   height: auto;
   margin: 0 auto;
   padding-top: 99px;
-  padding-bottom: 32px;
+  padding-bottom: 40px;
 }
 section .first-post-content h2 {
-  margin-top: -12px;
+  margin-left: -3px;
+  margin-top: -4px;
 }
 section .first-post-content p {
-  margin-top: -6px;
+  margin-top: -9px;
+  margin-left: -3px;
+}
+section .first-post-content h5 {
+  max-height: 11px;
+  margin-top: -4px;
+  margin-left: -3px;
 }
 section .first-post-content .btnLoadMore {
   opacity: 0;
@@ -146,7 +155,7 @@ section .first-post-content .btnLoadMore {
 }
 section .first-post-content label + h5 {
   padding-top: 52px;
-  margin-top: -8px;
+  margin-top: -6px;
 }
 section .second-post {
   max-width: 960px;
@@ -155,13 +164,13 @@ section .second-post {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 103px;
+  padding-top: 102px;
 }
 section .second-post-box {
-  max-width: 45%;
+  max-width: 43.75%;
   display: flex;
   flex-direction: column;
-  padding: 0 2.5% 122px;
+  padding: 0 3.125% 105px;
   text-align: left;
 }
 section .second-post-box-content .btnLoadMore {
@@ -177,6 +186,7 @@ section .second-post-box-content .content {
 }
 section .second-post-box-content .btnLoadMore ~ label:before {
   content: "Load More";
+  padding-top: 50px;
 }
 section .second-post-box-content .btnLoadMore:checked ~ label:before {
   content: "Load Less";
@@ -193,6 +203,17 @@ section .second-post-box-content .btn:hover {
   background-color: #626262;
   color: #fff;
 }
+section .second-post-box-content h5 {
+  max-height: 11px;
+  margin-top: -7px;
+}
+section .second-post-box-content h2 {
+  max-height: 30px;
+  margin-top: -4px;
+}
+section .second-post-box-content p {
+  margin-top: 3px;
+}
 section .second-post-box__img {
   width: 100%;
   height: auto;
@@ -203,10 +224,12 @@ section .second-post-box__img img {
   height: auto;
 }
 section .second-post .btn_loadMore {
-  margin: 165px auto;
+  margin: 35px auto 98px;
 }
 section .second-post .btn_loadMore button {
   padding: 21px 34px;
+  min-width: 164px;
+  min-height: 60px;
   color: #626262;
   background-color: inherit;
   border: 1px solid #626262;
@@ -223,6 +246,8 @@ section .newSletter {
   width: 100%;
   height: auto;
   background-color: #f0f0f0;
+  margin-top: -9px;
+  max-height: 287px;
 }
 section .newSletter_content {
   max-width: 400px;
@@ -236,12 +261,15 @@ section .newSletter_content h2 {
   letter-spacing: 0.75px;
   padding-bottom: 69px;
   padding-top: 0;
+  max-height: 30px;
+  margin-top: -8px;
 }
 section .newSletter_content form {
   border-bottom: 1px solid #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 4px;
 }
 section .newSletter_content form input {
   background-color: inherit;
@@ -253,7 +281,7 @@ section .newSletter_content form input {
   line-height: 24px;
   text-align: left;
   margin: 0;
-  padding: 14px 0;
+  padding: 10px 0;
 }
 section .newSletter_content form input:active, section .newSletter_content form input:focus {
   border: none;
@@ -265,6 +293,7 @@ section .newSletter_content form button {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 9px;
 }
 section .newSletter_content form button:hover {
   cursor: pointer;
@@ -285,6 +314,7 @@ footer .footer {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  max-height: 97px;
 }
 footer .footer-content {
   display: flex;
@@ -295,6 +325,7 @@ footer .footer-content {
 footer .footer-content_left {
   display: flex;
   justify-content: flex-start;
+  margin-top: -18px;
 }
 footer .footer-content_left p {
   padding-right: 17px;
@@ -302,10 +333,12 @@ footer .footer-content_left p {
   line-height: 24px;
   color: #000000;
   text-align: left;
+  max-height: 12px;
 }
 footer .footer-content_right {
   display: flex;
   justify-content: flex-end;
+  margin-top: -6px;
 }
 footer .footer-content_right p {
   padding-left: 17px;
@@ -314,10 +347,12 @@ footer .footer-content_right p {
   line-height: 24px;
   color: #000000;
   text-align: left;
+  max-height: 12px;
 }
 footer .footer-content_right img {
-  padding-left: 17px;
+  padding-left: 20px;
   color: #626262;
+  max-height: 12px;
 }
 
 @media screen and (max-width: 934px) {
